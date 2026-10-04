@@ -1,6 +1,8 @@
+[English](README.md) · **简体中文** · [日本語](README.ja.md)
+
 # SpeakLog
 
-**先说出来，再慢慢改好。** · Speak first. Polish it later. · まず話す。直すのは、あとで。
+**先说出来，再慢慢改好。**
 
 SpeakLog 是给外语学习者的 Mac 应用：导入或录下你用外语说的话，本机转录，对照原话和更自然的说法，导出字幕、学习博客和逐词高亮的字幕视频。
 
