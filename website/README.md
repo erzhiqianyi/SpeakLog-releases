@@ -39,17 +39,9 @@ website/deploy.sh
 
 脚本把站点文件复制到临时目录（不带 `README.md`、`deploy.sh`、`make-og.swift`），再用 `wrangler pages deploy` 上传。需要 Node，并且已经用 `npx wrangler login` 登录 Cloudflare。
 
-## 还是占位符的
+## 统计
 
-**GA4 衡量 ID** `G-XXXXXXXXXX`，只在 `assets/analytics.js`。ID 还是占位符时页面不会加载 Google 的脚本。拿到 ID 后：
-
-```bash
-sed -i '' 's/G-XXXXXXXXXX/G-你的ID/' website/assets/analytics.js
-```
-
-然后把三个页面和 `404.html` 里的 `?v=` 加一（见下文），再部署。
-
-下载地址确定后，把三个页面 `#download` 区块里下载按钮的 `href` 改成下载链接。
+**GA4 衡量 ID** `G-MB3812Z1TL`，只在 `assets/analytics.js`。换 ID 时改这一处，再把三个页面和 `404.html` 里 `analytics.js` 的 `?v=` 加一（见下文），然后部署。
 
 ## 统计的事件
 

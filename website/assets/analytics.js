@@ -1,6 +1,5 @@
-// Google Analytics 4。上线前把下面的占位符换成真实的衡量 ID；
-// 还是占位符时不会加载任何 Google 脚本，gtag() 调用只进本地 dataLayer。
-window.SPEAKLOG_GA_ID = 'G-XXXXXXXXXX';
+// Google Analytics 4 衡量 ID。
+window.SPEAKLOG_GA_ID = 'G-MB3812Z1TL';
 
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
