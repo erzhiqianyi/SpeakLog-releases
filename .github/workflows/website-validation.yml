@@ -1,0 +1,27 @@
+name: Website validation
+
+on:
+  pull_request:
+    paths: ['website/**', 'scripts/**', 'tests/**', '.github/workflows/website-validation.yml']
+  push:
+    paths: ['website/**', 'scripts/**', 'tests/**', '.github/workflows/website-validation.yml']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate, regression-test and build without publishing
+        run: website/deploy.sh --dry-run
+# Intentionally no Cloudflare credentials, deployment action or production job.

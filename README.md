@@ -16,7 +16,16 @@ Website: https://speak.erzhiqian.cc/en/
 | Disk image | Download `SpeakLog-<version>.dmg` from [Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest) and drag the app into Applications |
 | Previous versions | [All releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases), each with `SHA256SUMS` |
 
-Requires macOS 26 or later. The installer and disk image are signed with a Developer ID and notarized by Apple.
+Version 0.1.1 requires an Apple silicon Mac (M-series chip) running macOS 26 or later. The current package does not support Intel Macs. The installer and disk image are signed with a Developer ID and notarized by Apple.
+
+## Guides
+
+- [Get started](https://speak.erzhiqian.cc/en/guides/getting-started/)
+- [Speaking practice](https://speak.erzhiqian.cc/en/guides/speaking-practice/)
+- [Export subtitles, blogs and video](https://speak.erzhiqian.cc/en/guides/export/)
+- [Privacy and data flow](https://speak.erzhiqian.cc/en/privacy/)
+
+Transcription, rendering and export run locally. Cloud AI features send relevant text and context to the selected provider; visual analysis passes sampled frames or photos to Claude Code or Codex, including when the global provider is the on-device model. Automatic AI review is on by default; check Settings → AI before importing private content.
 
 ## What's in this repository
 

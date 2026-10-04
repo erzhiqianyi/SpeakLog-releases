@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>SpeakLog — Turn the language you speak into subtitles, blog posts and videos | Mac app for language learners</title>
-<meta name="description" content="SpeakLog is a Mac app for language learners: speak first, polish it later. It transcribes your recordings and videos on your Mac, puts what you said next to a more natural version, and exports subtitles, a study blog post and word-highlighted subtitle videos. Japanese, English, Chinese, Korean and more.">
+<title>SpeakLog | Speaking Practice &amp; Subtitle Export for Mac</title>
+<meta name="description" content="Practice a language on Mac: transcribe recordings, compare original and natural wording, and export subtitles, study blogs or MP4. Apple silicon, macOS 26+.">
 <link rel="canonical" href="https://speak.erzhiqian.cc/en/">
 <link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/">
 <link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/">
@@ -22,15 +22,15 @@
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="ja_JP">
 <meta property="og:url" content="https://speak.erzhiqian.cc/en/">
-<meta property="og:title" content="SpeakLog — Speak first. Polish it later.">
-<meta property="og:description" content="Turn the foreign language you speak into subtitles, a study blog post and word-highlighted subtitle videos. A Mac app that transcribes and renders on your Mac.">
+<meta property="og:title" content="SpeakLog | Speaking Practice &amp; Subtitle Export for Mac">
+<meta property="og:description" content="Practice a language on Mac: transcribe recordings, compare original and natural wording, and export subtitles, study blogs or MP4. Apple silicon, macOS 26+.">
 <meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-en.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SpeakLog: Speak first. Polish it later.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SpeakLog — Speak first. Polish it later.">
-<meta name="twitter:description" content="Turn the foreign language you speak into subtitles, a study blog post and word-highlighted subtitle videos.">
+<meta name="twitter:title" content="SpeakLog | Speaking Practice &amp; Subtitle Export for Mac">
+<meta name="twitter:description" content="Practice a language on Mac: transcribe recordings, compare original and natural wording, and export subtitles, study blogs or MP4. Apple silicon, macOS 26+.">
 <meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-en.png">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -46,7 +46,11 @@
       "@id": "https://speak.erzhiqian.cc/#website",
       "url": "https://speak.erzhiqian.cc/",
       "name": "SpeakLog",
-      "inLanguage": ["zh-CN", "en", "ja"]
+      "inLanguage": [
+        "zh-CN",
+        "en",
+        "ja"
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -54,13 +58,12 @@
       "name": "SpeakLog",
       "alternateName": "スピークログ",
       "applicationCategory": "EducationalApplication",
-      "operatingSystem": "macOS 26 or later",
-      "description": "A Mac app for language learners: import or record what you say in a foreign language, transcribe it on your Mac, compare it with a more natural version, and export subtitles, a study blog post and word-highlighted subtitle videos.",
+      "operatingSystem": "macOS 26+",
+      "description": "Practice a language on Mac: transcribe recordings, compare original and natural wording, and export subtitles, study blogs or MP4. Apple silicon, macOS 26+.",
       "url": "https://speak.erzhiqian.cc/en/",
       "image": "https://speak.erzhiqian.cc/assets/icon-512.png",
       "softwareVersion": "0.1.1",
       "downloadUrl": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg",
-      "screenshot": "https://speak.erzhiqian.cc/assets/og-en.png",
       "inLanguage": "en",
       "featureList": [
         "On-device transcription with word-level timestamps",
@@ -70,7 +73,9 @@
         "Karaoke-style subtitle videos colored by part of speech, with readings",
         "Automatic face blurring for passers-by",
         "AI assistant and external agents (MCP)"
-      ]
+      ],
+      "processorRequirements": "Apple silicon (arm64)",
+      "releaseNotes": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1"
     },
     {
       "@type": "FAQPage",
@@ -78,27 +83,42 @@
         {
           "@type": "Question",
           "name": "Which languages does SpeakLog support?",
-          "acceptedAnswer": { "@type": "Answer", "text": "You choose the language you practice: English, Japanese, Chinese, Korean, French, Spanish, German and more, set per project. Explanations, grammar notes and translations are written in a language you understand." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Practice languages are set per project, including English, Japanese, Chinese, Korean, French, Spanish and German. Transcription depends on macOS speech support and may need a model download on first use. Explanation and translation languages are set separately."
+          }
         },
         {
           "@type": "Question",
           "name": "Are my recordings and videos uploaded?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Transcription, video rendering, face blurring and export all happen on your Mac, and imported files are not copied. Only when you turn on AI review is the transcript sent to the AI provider you picked; with the on-device model everything stays offline." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Transcription, rendering, face blurring and export run locally. Cloud AI sends the text and context each feature needs. Visual analysis passes sampled frames or photos to Claude Code or Codex; it still uses Codex when the global provider is the on-device model. Check automatic review and provider settings before using private content."
+          }
         },
         {
           "@type": "Question",
           "name": "Will the AI overwrite what I actually said?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Your original words are saved the moment you record them. AI suggestions live in a separate natural layer, each with a reason, and you decide whether to accept or skip them." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Transcription and natural wording are separate layers, and review lets you accept, skip or edit suggestions. The AI assistant and external agents can edit subtitles and other project content, so separate layers do not make every field immutable. Keep the original media and review important changes."
+          }
         },
         {
           "@type": "Question",
           "name": "What do I need to run it?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A Mac running macOS 26 or later." }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The current 0.1.1 package requires an Apple silicon Mac (M-series chip) with macOS 26 or later. Intel Macs are not supported by this package. The on-device text AI also requires available Apple Intelligence."
+          }
         },
         {
           "@type": "Question",
-          "name": "Where can I publish what I make?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Subtitles export as SRT, VTT or ASS for CapCut, Aegisub or Final Cut. Blog posts export as Markdown or HTML, copy as rich text into note or Medium, or split into an X thread. Videos export as MP4 in 16:9, 9:16 or 1:1 for YouTube, Instagram, TikTok and more." }
+          "name": "Which formats can I export?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Export SRT, VTT or ASS subtitles; save Markdown or HTML blogs, copy rich text to note or Medium, or split text into an X thread. Video exports are MP4 in 16:9, 9:16 or 1:1. You upload or publish the results yourself."
+          }
         }
       ]
     }
@@ -107,9 +127,9 @@
 </script>
 
 <!-- Google Analytics 4: the ID lives in /assets/analytics.js -->
-<script src="/assets/analytics.js?v=4"></script>
+<script src="/assets/analytics.js?v=5"></script>
 
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -124,7 +144,7 @@
       <a href="#how">How it works</a>
       <a href="#outputs">What you make</a>
       <a href="#features">Features</a>
-      <a href="#faq">FAQ</a>
+      <a href="#guides">Guides</a>
       <span class="lang" role="group" aria-label="Language">
         <a href="/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a>
         <a href="/en/" hreflang="en" lang="en" aria-current="true">EN</a>
@@ -160,7 +180,7 @@
           </div>
         </div>
         <div class="demo-bar" aria-hidden="true"><span id="tc">0:00</span><div class="track"><div class="fill" id="fill"></div></div><span>0:04</span></div>
-        <figcaption class="legend">
+        <figcaption class="legend"><span class="demo-caption">Illustrative subtitle example, not an app screenshot</span>
           <span><i style="background:#8DB6FF"></i>Noun</span>
           <span><i style="background:#6EE0AE"></i>Verb</span>
           <span><i style="background:#FF94C6"></i>Adjective</span>
@@ -170,6 +190,8 @@
       </figure>
     </div>
   </section>
+
+<section class="quick-facts" aria-label="SpeakLog product facts"><div class="wrap"><dl><div><dt>Current release</dt><dd>0.1.1</dd></div><div><dt>Requirements</dt><dd>Apple silicon · macOS 26+</dd></div><div><dt>On your Mac</dt><dd>Transcription, rendering, export</dd></div><div><dt>Optional AI</dt><dd>Review, blogs, analysis</dd></div></dl></div></section>
 
   <section id="why" aria-labelledby="why-title">
     <div class="wrap">
@@ -186,8 +208,8 @@
         </article>
         <article class="card">
           <div class="num">02</div>
-          <h3>Your words stay yours</h3>
-          <p>What you actually said is always kept. AI edits sit in a separate layer next to it, so months later you can see exactly how far you've come.</p>
+          <h3>Compare the original and revision</h3>
+          <p>Raw recognition is retained separately from reviewed and natural wording. Compare the source recording with your practice record to revisit your expression and later edits.</p>
         </article>
         <article class="card">
           <div class="num">03</div>
@@ -207,11 +229,11 @@
       <ol class="steps" style="list-style:none;padding:0;margin:0">
         <li class="card step">
           <h3>Speak</h3>
-          <p>Drag in a voice memo, vlog or talking-head video, or hit record in the app. Your files are never copied.</p>
+          <p>Drag in a voice memo, vlog or talking-head video, or hit record in the app. Imported files are referenced at their existing location.</p>
         </li>
         <li class="card step">
           <h3>Transcribe</h3>
-          <p>On-device speech recognition with per-word timestamps and confidence, split into sentences at pauses. A 6-minute video takes about a second.</p>
+          <p>On-device speech recognition with per-word timestamps and confidence, split into sentences at pauses. Speed depends on hardware, language and media.</p>
         </li>
         <li class="card step">
           <h3>Review</h3>
@@ -319,7 +341,7 @@
         <h2 id="features-title">Details built for speaking and learning.</h2>
       </div>
       <div class="features">
-        <div class="feat"><h3>Any practice language</h3><p>English, Japanese, Chinese, Korean, French, Spanish, German… set per project.</p></div>
+        <div class="feat"><h3>Practice language per project</h3><p>English, Japanese, Chinese, Korean, French, Spanish, German… set per project.</p></div>
         <div class="feat"><h3>Readings per language</h3><p>Furigana for Japanese, pinyin for Chinese, romanization for Korean and Russian — or just part-of-speech colors.</p></div>
         <div class="feat"><h3>Topic prompts</h3><p>Nothing to say? Draw a topic, or let AI suggest a batch matched to your level.</p></div>
         <div class="feat"><h3>Live captions while recording</h3><p>Hit record to start; stop and it becomes a project.</p></div>
@@ -335,17 +357,19 @@
     <div class="wrap grid">
       <div class="head" style="margin-bottom:0">
         <div class="kicker">Privacy, on your Mac</div>
-        <h2 id="privacy-title">Your voice and footage stay on your Mac.</h2>
-        <p>Transcription, video rendering, face blurring and export all run locally. Imported files are referenced in place — never copied or uploaded. AI only suggests; you decide. Every AI call is logged with the model, token count and an estimated cost.</p>
+        <h2 id="privacy-title">Local processing, with AI data flow you can check.</h2>
+        <p>Transcription, video rendering, face blurring and export run on the Mac. Cloud review, blogs and assistant features send the text and context they need; visual analysis passes sampled frames or photos to Claude Code or Codex. Selecting an on-device model does not make every feature offline. <a href="/en/privacy/">Read about data flow and AI costs</a></p>
       </div>
       <div class="providers" aria-label="AI providers">
         <div class="prov"><span class="dot" style="background:var(--accent)"></span><div><b>Claude Code CLI</b><span>Uses your signed-in claude; choose Sonnet, Opus or Haiku</span></div></div>
         <div class="prov"><span class="dot" style="background:var(--noun)"></span><div><b>Codex CLI</b><span>Uses your signed-in codex</span></div></div>
         <div class="prov"><span class="dot" style="background:var(--adj)"></span><div><b>Anthropic API</b><span>Your API key is stored in the macOS Keychain</span></div></div>
-        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>On-device model</b><span>Fully offline and free; good enough for translation and annotation</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>Apple on-device text model</b><span>Requires available Apple Intelligence; visual analysis uses a CLI</span></div></div>
       </div>
     </div>
   </section>
+
+<section id="guides" aria-labelledby="guides-title"><div class="wrap"><div class="head"><div class="kicker">Guides</div><h2 id="guides-title">From a first recording to a useful practice record.</h2></div><div class="guide-cards"><a class="card" href="/en/guides/getting-started/" data-track="guide_click" data-track-location="homepage_guides"><h3>Get started</h3><p>Installation, language and AI settings, and your first import.</p></a><a class="card" href="/en/guides/speaking-practice/" data-track="guide_click" data-track-location="homepage_guides"><h3>Practice speaking</h3><p>Separate recognition errors from expression problems, then say it again.</p></a><a class="card" href="/en/guides/export/" data-track="guide_click" data-track-location="homepage_guides"><h3>Export your work</h3><p>Choose SRT / VTT / ASS, Markdown / HTML, or an MP4 video.</p></a><a class="card" href="/en/privacy/" data-track="guide_click" data-track-location="homepage_guides"><h3>Privacy and data flow</h3><p>See which tasks run locally and which text or images go to AI.</p></a></div></div></section>
 
   <section id="faq" aria-labelledby="faq-title">
     <div class="wrap">
@@ -354,26 +378,11 @@
         <h2 id="faq-title">Questions you might have</h2>
       </div>
       <div class="faq">
-        <details>
-          <summary>Which languages does SpeakLog support?</summary>
-          <p>You choose the language you practice: English, Japanese, Chinese, Korean, French, Spanish, German and more, set per project. Explanations, grammar notes and translations are written in a language you understand.</p>
-        </details>
-        <details>
-          <summary>Are my recordings and videos uploaded?</summary>
-          <p>No. Transcription, video rendering, face blurring and export all happen on your Mac, and imported files are not copied. Only when you turn on AI review is the transcript sent to the AI provider you picked; with the on-device model everything stays offline.</p>
-        </details>
-        <details>
-          <summary>Will the AI overwrite what I actually said?</summary>
-          <p>No. Your original words are saved the moment you record them. AI suggestions live in a separate natural layer, each with a reason, and you decide whether to accept or skip them.</p>
-        </details>
-        <details>
-          <summary>What do I need to run it?</summary>
-          <p>A Mac running macOS 26 or later.</p>
-        </details>
-        <details>
-          <summary>Where can I publish what I make?</summary>
-          <p>Subtitles export as SRT, VTT or ASS for CapCut, Aegisub or Final Cut. Blog posts export as Markdown or HTML, copy as rich text into note or Medium, or split into an X thread. Videos export as MP4 in 16:9, 9:16 or 1:1 for YouTube, Instagram, TikTok and more.</p>
-        </details>
+        <details><summary>Which languages does SpeakLog support?</summary><p>Practice languages are set per project, including English, Japanese, Chinese, Korean, French, Spanish and German. Transcription depends on macOS speech support and may need a model download on first use. Explanation and translation languages are set separately.</p></details>
+        <details><summary>Are my recordings and videos uploaded?</summary><p>Transcription, rendering, face blurring and export run locally. Cloud AI sends the text and context each feature needs. Visual analysis passes sampled frames or photos to Claude Code or Codex; it still uses Codex when the global provider is the on-device model. Check automatic review and provider settings before using private content.</p></details>
+        <details><summary>Will the AI overwrite what I actually said?</summary><p>Transcription and natural wording are separate layers, and review lets you accept, skip or edit suggestions. The AI assistant and external agents can edit subtitles and other project content, so separate layers do not make every field immutable. Keep the original media and review important changes.</p></details>
+        <details><summary>What do I need to run it?</summary><p>The current 0.1.1 package requires an Apple silicon Mac (M-series chip) with macOS 26 or later. Intel Macs are not supported by this package. The on-device text AI also requires available Apple Intelligence.</p></details>
+        <details><summary>Which formats can I export?</summary><p>Export SRT, VTT or ASS subtitles; save Markdown or HTML blogs, copy rich text to note or Medium, or split text into an X thread. Video exports are MP4 in 16:9, 9:16 or 1:1. You upload or publish the results yourself.</p></details>
       </div>
     </div>
   </section>
@@ -384,8 +393,8 @@
         <img src="/assets/icon-192.png" alt="SpeakLog app icon" width="96" height="96" loading="lazy">
         <h2 id="download-title">Say something today.</h2>
         <p>It doesn't have to be good — speak first, polish it later.</p>
-        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="download_click" data-track-location="cta">Download for Mac</a>
-        <p class="sys">Requires macOS 26 or later · Notarized by Apple · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="download_click" data-track-location="releases">DMG and previous versions</a></p>
+        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="cta">Download for Mac</a>
+        <p class="sys">Current version <span data-version="0.1.1">0.1.1</span> · Apple silicon (M-series) · macOS 26+ · Apple-notarized installer · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="release_page_click" data-track-location="releases">DMG and previous versions</a></p>
       </div>
     </div>
   </section>
@@ -396,7 +405,7 @@
     <span>© 2026 SpeakLog</span>
     <nav aria-label="Footer">
       <a href="#features">Features</a>
-      <a href="#privacy">Privacy</a>
+      <a href="/en/privacy/">Privacy & data flow</a>
       <a href="#faq">FAQ</a>
       <a href="https://x.com/itsuki_maer" rel="me noopener" target="_blank">X</a>
       <a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a>
@@ -404,6 +413,6 @@
   </div>
 </footer>
 
-<script src="/assets/site.js?v=3" defer></script>
+<script src="/assets/site.js?v=4" defer></script>
 </body>
 </html>

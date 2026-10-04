@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeakLog privacy and data flow: local processing and AI</title>
+<meta name="description" content="See which SpeakLog tasks run on your Mac, which AI features send text or sampled images, and how project logs, external agents and website analytics differ.">
+<link rel="canonical" href="https://speak.erzhiqian.cc/en/privacy/">
+<link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/privacy/">
+<link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/privacy/">
+<link rel="alternate" hreflang="ja" href="https://speak.erzhiqian.cc/ja/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://speak.erzhiqian.cc/en/privacy/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1B1838">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpeakLog">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://speak.erzhiqian.cc/en/privacy/">
+<meta property="og:title" content="SpeakLog privacy and data flow: local processing and AI">
+<meta property="og:description" content="See which SpeakLog tasks run on your Mac, which AI features send text or sampled images, and how project logs, external agents and website analytics differ.">
+<meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpeakLog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpeakLog privacy and data flow: local processing and AI">
+<meta name="twitter:description" content="See which SpeakLog tasks run on your Mac, which AI features send text or sampled images, and how project logs, external agents and website analytics differ.">
+<meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-en.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/site.css?v=4">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://speak.erzhiqian.cc/en/privacy/#page",
+      "url": "https://speak.erzhiqian.cc/en/privacy/",
+      "headline": "SpeakLog privacy and data flow: local processing and AI",
+      "description": "See which SpeakLog tasks run on your Mac, which AI features send text or sampled images, and how project logs, external agents and website analytics differ.",
+      "inLanguage": "en",
+      "dateModified": "2026-10-04",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SpeakLog",
+        "url": "https://speak.erzhiqian.cc/"
+      },
+      "mainEntityOfPage": "https://speak.erzhiqian.cc/en/privacy/",
+      "isPartOf": {
+        "@id": "https://speak.erzhiqian.cc/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://speak.erzhiqian.cc/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SpeakLog privacy and data flow: local processing and AI",
+          "item": "https://speak.erzhiqian.cc/en/privacy/"
+        }
+      ]
+    }
+  ]
+}</script>
+<script src="/assets/analytics.js?v=5"></script>
+</head>
+<body class="guide-page">
+<a class="skip" href="#main">Skip to content</a>
+<header class="top"><div class="wrap"><a class="logo" href="/en/"><img src="/assets/icon-192.png" alt="" width="30" height="30">SpeakLog</a><nav aria-label="Guides"><a href="/en/#guides">Guides</a><span class="lang" role="group" aria-label="Language"><a href="/privacy/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a><a href="/en/privacy/" hreflang="en" lang="en" aria-current="true">EN</a><a href="/ja/privacy/" hreflang="ja" lang="ja" data-track="language_switch" data-track-location="ja">日本語</a></span></nav></div></header>
+<main id="main" class="guide wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog privacy and data flow: local processing and AI</span></nav>
+<article>
+<header class="guide-head"><p class="kicker">Guides</p><h1>SpeakLog privacy and data flow: local processing and AI</h1><p class="guide-intro">On-device transcription does not make every feature offline. SpeakLog runs transcription, video rendering and face blurring on the Mac. Cloud AI, visual analysis and external agents can pass relevant content to their providers.</p><p class="guide-meta">For SpeakLog <span data-version="0.1.1">0.1.1</span> · Reviewed October 4, 2026 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1" data-track="release_page_click" data-track-location="guide_version">0.1.1 release notes</a></p></header>
+<nav class="guide-toc card" aria-label="On this page"><ol><li><a href="#section-1">What runs locally</a></li><li><a href="#section-2">What may be sent to AI providers</a></li><li><a href="#section-3">Projects, logs and external agents</a></li><li><a href="#section-4">Costs and control boundaries</a></li><li><a href="#section-5">Analytics on this website</a></li></ol></nav>
+<section id="section-1"><h2>What runs locally</h2><p>Speech transcription, video rendering, face detection and blurring, and file export use local Mac processing. A system speech-model download may be needed for a language’s first use.</p><p>Imported source media is normally referenced at its existing path; importing does not itself upload the complete file. In-app recordings, project data, exports and sampled analysis frames are written to local files.</p></section>
+<section id="section-2"><h2>What may be sent to AI providers</h2><p>Review, translation, annotation, blog generation, content analysis, topic generation and assistant chat send the text and context needed by the feature. Cloud routes include Claude Code, Codex CLI and the Anthropic API. A signed-in CLI is not offline processing.</p><p>Visual analysis extracts frames from a video, or reads a photo, and passes images to a vision-capable CLI. If the global provider is the Anthropic API or the on-device model, visual analysis still uses Codex CLI. This is more than sending text, but does not mean the complete original video is uploaded.</p><p>The on-device model keeps the text tasks it actually handles local. Its selection is not a block on all external calls. The import workflow can review automatically; disable unwanted automatic tasks and check settings before processing sensitive content.</p></section>
+<section id="section-3"><h2>Projects, logs and external agents</h2><p>The default project library is Movies/SpeakLog on your Mac. AI usage records can contain prompts, raw outputs, model names, token counts and estimated costs. Project packages and logs can therefore contain private material.</p><p>MCP communicates with the app locally, but connected external agents can read and change projects. That context may also reach the agent provider. Connect only trusted clients and review their data settings.</p><p>The app stores Anthropic API keys in the macOS Keychain. Do not paste keys, project logs or private media into a public issue report.</p></section>
+<section id="section-4"><h2>Costs and control boundaries</h2><p>Text tasks using the on-device model do not incur cloud API-call charges. Cloud subscriptions, API bills, quotas and retention rules depend on your provider. The app’s cost display is an estimate, not the provider’s final bill.</p><p>This page describes version 0.1.1’s feature and data paths. It does not promise third-party retention behavior or announce future app pricing. Review each service’s terms and privacy settings before use.</p></section>
+<section id="section-5"><h2>Analytics on this website</h2><p>The product website uses Google Analytics 4 for page views and interactions, including page language, package-download clicks, release-page clicks, language changes and FAQ openings. A download-button click is not proof of installation.</p><p>The website loads Google’s analytics script, which your browser or content blocker may block. This is separate from recordings and project content processed by the Mac app. Send privacy questions to speaklog@erzhiqian.cc.</p></section>
+</article>
+<aside class="guide-related"><h2>Keep reading</h2><ul><li><a href="/en/guides/getting-started/" data-track="guide_click" data-track-location="related_guides">Get started with SpeakLog on Mac</a></li><li><a href="/en/guides/speaking-practice/" data-track="guide_click" data-track-location="related_guides">Practice speaking with SpeakLog: record, compare, repeat</a></li><li><a href="/en/guides/export/" data-track="guide_click" data-track-location="related_guides">Export from SpeakLog: subtitles, blog posts and MP4</a></li></ul><a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="guide_footer">Download for Mac</a></aside>
+</main>
+<footer><div class="wrap"><span>© 2026 SpeakLog</span><nav aria-label="Footer"><a href="/en/privacy/">Privacy & data flow</a><a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a></nav></div></footer>
+<script src="/assets/site.js?v=4" defer></script>
+</body>
+</html>

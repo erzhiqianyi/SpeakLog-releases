@@ -4,14 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!--
-  上线前替换占位符（见 website/README.md）：
-    https://speak.erzhiqian.cc  → 正式域名
--->
-
-<title>SpeakLog — 把你说的外语，变成字幕、博客和视频 | Mac 外语口语练习应用</title>
-<meta name="description" content="SpeakLog 是给外语学习者的 Mac 应用：先开口说，再一句一句改好。本机转录你的录音或视频，对照「我说的」和「更自然的说法」，导出字幕、学习博客和逐词高亮的字幕视频。支持英语、日语、中文、韩语等。">
-<meta name="keywords" content="外语口语练习,口语输出,日语学习,英语口语,Mac 应用,字幕生成,自动字幕,学习博客,Vlog 字幕,逐词高亮字幕,假名注音,AI 纠错,SpeakLog">
+<title>SpeakLog｜Mac 外语口语练习与字幕导出</title>
+<meta name="description" content="用 SpeakLog 在 Mac 上转录外语录音，对照原话与自然表达，导出 SRT 字幕、学习博客和 MP4。适用于 Apple silicon Mac，macOS 26 起。">
 <link rel="canonical" href="https://speak.erzhiqian.cc/">
 <link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/">
 <link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/">
@@ -28,15 +22,15 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:locale:alternate" content="ja_JP">
 <meta property="og:url" content="https://speak.erzhiqian.cc/">
-<meta property="og:title" content="SpeakLog — 先说出来，再慢慢改好">
-<meta property="og:description" content="把你自己说的外语，变成字幕、学习博客和逐词高亮的字幕视频。Mac 应用，转录和渲染都在本机完成。">
+<meta property="og:title" content="SpeakLog｜Mac 外语口语练习与字幕导出">
+<meta property="og:description" content="用 SpeakLog 在 Mac 上转录外语录音，对照原话与自然表达，导出 SRT 字幕、学习博客和 MP4。适用于 Apple silicon Mac，macOS 26 起。">
 <meta property="og:image" content="https://speak.erzhiqian.cc/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SpeakLog：先说出来，再慢慢改好">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SpeakLog — 先说出来，再慢慢改好">
-<meta name="twitter:description" content="把你自己说的外语，变成字幕、学习博客和逐词高亮的字幕视频。">
+<meta name="twitter:title" content="SpeakLog｜Mac 外语口语练习与字幕导出">
+<meta name="twitter:description" content="用 SpeakLog 在 Mac 上转录外语录音，对照原话与自然表达，导出 SRT 字幕、学习博客和 MP4。适用于 Apple silicon Mac，macOS 26 起。">
 <meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og.png">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -53,7 +47,11 @@
       "@id": "https://speak.erzhiqian.cc/#website",
       "url": "https://speak.erzhiqian.cc/",
       "name": "SpeakLog",
-      "inLanguage": "zh-CN"
+      "inLanguage": [
+        "zh-CN",
+        "en",
+        "ja"
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -61,13 +59,12 @@
       "name": "SpeakLog",
       "alternateName": "スピークログ",
       "applicationCategory": "EducationalApplication",
-      "operatingSystem": "macOS 26 或更高版本",
-      "description": "给外语学习者的 Mac 应用：导入或录下你用外语说的话，本机转录，对照原话和更自然的说法，导出字幕、学习博客和逐词高亮的字幕视频。",
+      "operatingSystem": "macOS 26+",
+      "description": "用 SpeakLog 在 Mac 上转录外语录音，对照原话与自然表达，导出 SRT 字幕、学习博客和 MP4。适用于 Apple silicon Mac，macOS 26 起。",
       "url": "https://speak.erzhiqian.cc/",
       "image": "https://speak.erzhiqian.cc/assets/icon-512.png",
       "softwareVersion": "0.1.1",
       "downloadUrl": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg",
-      "screenshot": "https://speak.erzhiqian.cc/assets/og.png",
       "inLanguage": "zh-CN",
       "featureList": [
         "本机离线转录，带逐词时间戳",
@@ -77,7 +74,9 @@
         "逐词高亮、按词性上色、带注音的字幕视频",
         "路人自动打码",
         "AI 助手与外部 Agent（MCP）"
-      ]
+      ],
+      "processorRequirements": "Apple silicon (arm64)",
+      "releaseNotes": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1"
     },
     {
       "@type": "FAQPage",
@@ -85,27 +84,42 @@
         {
           "@type": "Question",
           "name": "SpeakLog 支持哪些语言？",
-          "acceptedAnswer": { "@type": "Answer", "text": "练习语言可以自己设置，英语、日语、中文、韩语、法语、西班牙语、德语等都可以，每个作品还能单独设置。修改原因、语法说明和翻译用你看得懂的语言来写。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "练习语言可按项目设置，包括英语、日语、中文、韩语、法语、西班牙语和德语等。实际转录取决于 macOS 语音支持，首次使用可能需要下载模型；解释和翻译语言可单独设置。"
+          }
         },
         {
           "@type": "Question",
           "name": "我的录音和视频会被上传吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "不会。转录、视频渲染、路人打码和导出都在你的 Mac 上完成，导入的文件也不会被复制。只有你启用 AI 校对时，文字稿会发给你选择的 AI 提供方；选端侧模型则完全离线。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "转录、渲染、人脸打码和导出在本机进行。云端 AI 功能会发送所需文字与上下文；画面分析会把抽取的帧或照片交给 Claude Code 或 Codex。即使全局选择端侧模型，画面分析仍使用 Codex。处理私人内容前，请检查自动校对和提供方设置。"
+          }
         },
         {
           "@type": "Question",
           "name": "AI 会改掉我原来说的话吗？",
-          "acceptedAnswer": { "@type": "Answer", "text": "不会。原话从录下的那一刻起就固定保存，AI 的修改只放在旁边的「自然说法」一层，每一处都附上原因，由你决定采纳还是忽略。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "转录结果和自然说法分层保存，校对时可以采纳、忽略或修改建议。不过 AI 助手和外部 Agent 可以编辑字幕等项目内容；分层不代表所有内容不可修改。请保留原媒体，并检查重要改动。"
+          }
         },
         {
           "@type": "Question",
           "name": "需要什么样的电脑？",
-          "acceptedAnswer": { "@type": "Answer", "text": "需要运行 macOS 26 或更高版本的 Mac。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "当前 0.1.1 安装包需要 Apple silicon Mac（M 系列芯片）及 macOS 26 或更高版本，不支持 Intel Mac。端侧 AI 文字模型还需要 Apple Intelligence 可用。"
+          }
         },
         {
           "@type": "Question",
-          "name": "可以导出到哪些平台？",
-          "acceptedAnswer": { "@type": "Answer", "text": "字幕导出 SRT、VTT、ASS，可以继续在剪映、Aegisub、Final Cut 里用；博客导出 Markdown、HTML，或复制排好版的富文本到 note、Medium，也能拆成 X 串推；视频导出 MP4，支持 16:9、9:16 和 1:1，适合 YouTube、Bilibili、Instagram、抖音。" }
+          "name": "可以导出哪些格式？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "字幕可导出 SRT、VTT、ASS；博客可保存 Markdown、HTML，或复制富文本到 note、Medium，也能拆成 X 串推；视频可导出 16:9、9:16 和 1:1 的 MP4。导出后由你自行上传或发布。"
+          }
         }
       ]
     }
@@ -114,9 +128,9 @@
 </script>
 
 <!-- Google Analytics 4：ID 在 /assets/analytics.js 里 -->
-<script src="/assets/analytics.js?v=4"></script>
+<script src="/assets/analytics.js?v=5"></script>
 
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">跳到正文</a>
@@ -131,7 +145,7 @@
       <a href="#how">怎么用</a>
       <a href="#outputs">三种产出</a>
       <a href="#features">功能</a>
-      <a href="#faq">常见问题</a>
+      <a href="#guides">指南</a>
       <span class="lang" role="group" aria-label="语言 / Language">
         <a href="/" hreflang="zh-CN" lang="zh-CN" aria-current="true">中文</a>
         <a href="/en/" hreflang="en" lang="en" data-track="language_switch" data-track-location="en">EN</a>
@@ -167,7 +181,7 @@
           </div>
         </div>
         <div class="demo-bar" aria-hidden="true"><span id="tc">0:00</span><div class="track"><div class="fill" id="fill"></div></div><span>0:04</span></div>
-        <figcaption class="legend">
+        <figcaption class="legend"><span class="demo-caption">字幕效果示意，非应用截图</span>
           <span><i style="background:#8DB6FF"></i>名词</span>
           <span><i style="background:#6EE0AE"></i>动词</span>
           <span><i style="background:#FF94C6"></i>形容词</span>
@@ -177,6 +191,8 @@
       </figure>
     </div>
   </section>
+
+<section class="quick-facts" aria-label="SpeakLog 产品信息"><div class="wrap"><dl><div><dt>当前版本</dt><dd>0.1.1</dd></div><div><dt>运行环境</dt><dd>Apple silicon · macOS 26+</dd></div><div><dt>本机处理</dt><dd>转录、渲染、导出</dd></div><div><dt>可选 AI</dt><dd>校对、博客、分析</dd></div></dl></div></section>
 
   <section id="why" aria-labelledby="why-title">
     <div class="wrap">
@@ -193,8 +209,8 @@
         </article>
         <article class="card">
           <div class="num">02</div>
-          <h3>原话永远保留</h3>
-          <p>你真实说出来的那一版一直都在，AI 的修改只是加在旁边的另一层。几个月后回头看，能清楚看到自己的进步。</p>
+          <h3>原始识别与改写分开</h3>
+          <p>保留原始识别结果，把听写纠错与自然表达分开查看。对照原媒体和练习记录，回顾当时的表达与后来做的修改。</p>
         </article>
         <article class="card">
           <div class="num">03</div>
@@ -214,11 +230,11 @@
       <ol class="steps" style="list-style:none;padding:0;margin:0">
         <li class="card step">
           <h3>说</h3>
-          <p>把手机录音、Vlog、口播视频拖进窗口，或者直接在应用里按下录音。文件不会被复制。</p>
+          <p>把手机录音、Vlog、口播视频拖进窗口，或者直接在应用里按下录音。导入时按原位置引用文件。</p>
         </li>
         <li class="card step">
           <h3>转录</h3>
-          <p>本机语音识别，带到每个词的时间戳和置信度，按停顿自动切句。6 分钟的视频约 1 秒完成。</p>
+          <p>本机语音识别，带到每个词的时间戳和置信度，按停顿自动切句。处理速度取决于设备、语言和素材。</p>
         </li>
         <li class="card step">
           <h3>校对</h3>
@@ -297,8 +313,8 @@
           <p>一篇学习笔记：先是正文，再是「我说的 → 更自然的说法」对照、语法点和生词表。可以设置固定栏目和系列编号。</p>
           <ul>
             <li>Markdown / HTML</li>
-            <li>富文本一键复制到 note、Medium</li>
-            <li>按字数拆成 X 串推</li>
+            <li>复制富文本后粘贴到 note、Medium</li>
+            <li>按字数拆成 X 串推供复制</li>
           </ul>
           <p class="where">note · Medium · X · Obsidian · 静态博客</p>
         </article>
@@ -326,7 +342,7 @@
         <h2 id="features-title">为「说」和「学」准备的细节。</h2>
       </div>
       <div class="features">
-        <div class="feat"><h3>任何练习语言</h3><p>英语、日语、中文、韩语、法语、西班牙语、德语……每个作品可以单独设置。</p></div>
+        <div class="feat"><h3>按项目设置练习语言</h3><p>英语、日语、中文、韩语、法语、西班牙语、德语……每个作品可以单独设置。</p></div>
         <div class="feat"><h3>按语言标注</h3><p>日语标假名，中文标拼音，韩语、俄语标罗马字；英语、法语可以只按词性上色。</p></div>
         <div class="feat"><h3>抽题开口</h3><p>不知道说什么？抽一个话题，或者让 AI 按你的水平出一批。</p></div>
         <div class="feat"><h3>边录边出字幕</h3><p>应用内录音，按下就开始，停下来自动变成一个作品。</p></div>
@@ -342,17 +358,19 @@
     <div class="wrap grid">
       <div class="head" style="margin-bottom:0">
         <div class="kicker">隐私与本机处理</div>
-        <h2 id="privacy-title">你的声音和画面，留在你的 Mac 上。</h2>
-        <p>转录、视频渲染、路人打码和导出全部在本机完成。导入的文件只记住位置，不复制、不上传。AI 只给建议，改不改由你决定；每一次 AI 调用都有记录，用了什么模型、多少 token、大概多少钱，一目了然。</p>
+        <h2 id="privacy-title">本机处理，云端 AI 按功能调用。</h2>
+        <p>转录、视频渲染、人脸打码和导出在 Mac 本机完成。云端校对、博客和助手等功能会发送所需文字与上下文；画面分析会把抽取的帧或照片交给 Claude Code 或 Codex。选择端侧模型不代表所有功能都离线。 <a href="/privacy/">了解数据流与 AI 费用</a></p>
       </div>
       <div class="providers" aria-label="AI 提供方">
         <div class="prov"><span class="dot" style="background:var(--accent)"></span><div><b>Claude Code 命令行</b><span>用你已经登录的 claude，可选 Sonnet / Opus / Haiku</span></div></div>
         <div class="prov"><span class="dot" style="background:var(--noun)"></span><div><b>Codex CLI</b><span>用你已经登录的 codex</span></div></div>
         <div class="prov"><span class="dot" style="background:var(--adj)"></span><div><b>Anthropic API</b><span>API key 存在系统钥匙串里</span></div></div>
-        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>端侧模型</b><span>完全离线、免费；翻译和标注够用</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>Apple 端侧文字模型</b><span>需要 Apple Intelligence 可用；画面分析另走 CLI</span></div></div>
       </div>
     </div>
   </section>
+
+<section id="guides" aria-labelledby="guides-title"><div class="wrap"><div class="head"><div class="kicker">使用指南</div><h2 id="guides-title">从第一段录音，到能保留的练习记录。</h2></div><div class="guide-cards"><a class="card" href="/guides/getting-started/" data-track="guide_click" data-track-location="homepage_guides"><h3>开始使用</h3><p>安装、语言与 AI 设置，以及第一次导入。</p></a><a class="card" href="/guides/speaking-practice/" data-track="guide_click" data-track-location="homepage_guides"><h3>完成一次口语练习</h3><p>分清识别错误和表达问题，改好后再说一次。</p></a><a class="card" href="/guides/export/" data-track="guide_click" data-track-location="homepage_guides"><h3>导出字幕、博客和视频</h3><p>选择 SRT / VTT / ASS、Markdown / HTML 或 MP4。</p></a><a class="card" href="/privacy/" data-track="guide_click" data-track-location="homepage_guides"><h3>隐私与数据流</h3><p>哪些在本机处理，哪些文字和画面会交给 AI。</p></a></div></div></section>
 
   <section id="faq" aria-labelledby="faq-title">
     <div class="wrap">
@@ -361,26 +379,11 @@
         <h2 id="faq-title">你可能想知道的</h2>
       </div>
       <div class="faq">
-        <details>
-          <summary>SpeakLog 支持哪些语言？</summary>
-          <p>练习语言可以自己设置，英语、日语、中文、韩语、法语、西班牙语、德语等都可以，每个作品还能单独设置。修改原因、语法说明和翻译用你看得懂的语言来写。</p>
-        </details>
-        <details>
-          <summary>我的录音和视频会被上传吗？</summary>
-          <p>不会。转录、视频渲染、路人打码和导出都在你的 Mac 上完成，导入的文件也不会被复制。只有你启用 AI 校对时，文字稿会发给你选择的 AI 提供方；选端侧模型则完全离线。</p>
-        </details>
-        <details>
-          <summary>AI 会改掉我原来说的话吗？</summary>
-          <p>不会。原话从录下的那一刻起就固定保存，AI 的修改只放在旁边的「自然说法」一层，每一处都附上原因，由你决定采纳还是忽略。</p>
-        </details>
-        <details>
-          <summary>需要什么样的电脑？</summary>
-          <p>需要运行 macOS 26 或更高版本的 Mac。</p>
-        </details>
-        <details>
-          <summary>可以导出到哪些平台？</summary>
-          <p>字幕导出 SRT、VTT、ASS，可以继续在剪映、Aegisub、Final Cut 里用；博客导出 Markdown、HTML，或复制排好版的富文本到 note、Medium，也能拆成 X 串推；视频导出 MP4，支持 16:9、9:16 和 1:1，适合 YouTube、Bilibili、Instagram、抖音。</p>
-        </details>
+        <details><summary>SpeakLog 支持哪些语言？</summary><p>练习语言可按项目设置，包括英语、日语、中文、韩语、法语、西班牙语和德语等。实际转录取决于 macOS 语音支持，首次使用可能需要下载模型；解释和翻译语言可单独设置。</p></details>
+        <details><summary>我的录音和视频会被上传吗？</summary><p>转录、渲染、人脸打码和导出在本机进行。云端 AI 功能会发送所需文字与上下文；画面分析会把抽取的帧或照片交给 Claude Code 或 Codex。即使全局选择端侧模型，画面分析仍使用 Codex。处理私人内容前，请检查自动校对和提供方设置。</p></details>
+        <details><summary>AI 会改掉我原来说的话吗？</summary><p>转录结果和自然说法分层保存，校对时可以采纳、忽略或修改建议。不过 AI 助手和外部 Agent 可以编辑字幕等项目内容；分层不代表所有内容不可修改。请保留原媒体，并检查重要改动。</p></details>
+        <details><summary>需要什么样的电脑？</summary><p>当前 0.1.1 安装包需要 Apple silicon Mac（M 系列芯片）及 macOS 26 或更高版本，不支持 Intel Mac。端侧 AI 文字模型还需要 Apple Intelligence 可用。</p></details>
+        <details><summary>可以导出哪些格式？</summary><p>字幕可导出 SRT、VTT、ASS；博客可保存 Markdown、HTML，或复制富文本到 note、Medium，也能拆成 X 串推；视频可导出 16:9、9:16 和 1:1 的 MP4。导出后由你自行上传或发布。</p></details>
       </div>
     </div>
   </section>
@@ -391,8 +394,8 @@
         <img src="/assets/icon-192.png" alt="SpeakLog 应用图标" width="96" height="96" loading="lazy">
         <h2 id="download-title">今天就说一段吧。</h2>
         <p>说得不好也没关系，先说出来，再慢慢改好。</p>
-        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="download_click" data-track-location="cta">下载 Mac 版</a>
-        <p class="sys">需要 macOS 26 或更高版本 · 已经过 Apple 公证 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="download_click" data-track-location="releases">DMG 和历史版本</a></p>
+        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="cta">下载 Mac 版</a>
+        <p class="sys">当前版本 <span data-version="0.1.1">0.1.1</span> · Apple silicon（M 系列）· macOS 26+ · Apple 公证安装包 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="release_page_click" data-track-location="releases">DMG 和历史版本</a></p>
       </div>
     </div>
   </section>
@@ -403,7 +406,7 @@
     <span>© 2026 SpeakLog · 读作 スピークログ</span>
     <nav aria-label="页脚">
       <a href="#features">功能</a>
-      <a href="#privacy">隐私</a>
+      <a href="/privacy/">隐私与数据流</a>
       <a href="#faq">常见问题</a>
       <a href="https://x.com/itsuki_maer" rel="me noopener" target="_blank">X</a>
       <a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a>
@@ -411,6 +414,6 @@
   </div>
 </footer>
 
-<script src="/assets/site.js?v=3" defer></script>
+<script src="/assets/site.js?v=4" defer></script>
 </body>
 </html>

@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>SpeakLog（スピークログ）— 話した外国語を、字幕・ブログ・動画に | 語学学習者のための Mac アプリ</title>
-<meta name="description" content="SpeakLog は語学学習者のための Mac アプリ。まず話して、直すのはあとで。録音や動画を Mac 上で文字起こしし、「自分が言ったこと」と「より自然な言い方」を並べて比べ、字幕・学習ブログ・単語ハイライト付きの字幕動画として書き出せます。英語・日本語・中国語・韓国語などに対応。">
+<title>SpeakLog｜Mac で外国語の会話練習・字幕作成</title>
+<meta name="description" content="録音を Mac 上で文字起こしし、元の発言と自然な表現を比較。字幕・学習ブログ・MP4 を書き出せる SpeakLog。Apple silicon、macOS 26 以降に対応。">
 <link rel="canonical" href="https://speak.erzhiqian.cc/ja/">
 <link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/">
 <link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/">
@@ -22,15 +22,15 @@
 <meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://speak.erzhiqian.cc/ja/">
-<meta property="og:title" content="SpeakLog — まず話す。直すのは、あとで。">
-<meta property="og:description" content="話した外国語を、字幕・学習ブログ・単語ハイライト付きの字幕動画に。文字起こしも書き出しも Mac 上で完結する語学アプリ。">
+<meta property="og:title" content="SpeakLog｜Mac で外国語の会話練習・字幕作成">
+<meta property="og:description" content="録音を Mac 上で文字起こしし、元の発言と自然な表現を比較。字幕・学習ブログ・MP4 を書き出せる SpeakLog。Apple silicon、macOS 26 以降に対応。">
 <meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SpeakLog：まず話す。直すのは、あとで。">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SpeakLog — まず話す。直すのは、あとで。">
-<meta name="twitter:description" content="話した外国語を、字幕・学習ブログ・単語ハイライト付きの字幕動画に。">
+<meta name="twitter:title" content="SpeakLog｜Mac で外国語の会話練習・字幕作成">
+<meta name="twitter:description" content="録音を Mac 上で文字起こしし、元の発言と自然な表現を比較。字幕・学習ブログ・MP4 を書き出せる SpeakLog。Apple silicon、macOS 26 以降に対応。">
 <meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
@@ -46,7 +46,11 @@
       "@id": "https://speak.erzhiqian.cc/#website",
       "url": "https://speak.erzhiqian.cc/",
       "name": "SpeakLog",
-      "inLanguage": ["zh-CN", "en", "ja"]
+      "inLanguage": [
+        "zh-CN",
+        "en",
+        "ja"
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -54,13 +58,12 @@
       "name": "SpeakLog",
       "alternateName": "スピークログ",
       "applicationCategory": "EducationalApplication",
-      "operatingSystem": "macOS 26 以降",
-      "description": "語学学習者のための Mac アプリ。外国語で話した録音や動画を Mac 上で文字起こしし、より自然な言い方と比べて、字幕・学習ブログ・単語ハイライト付きの字幕動画として書き出せます。",
+      "operatingSystem": "macOS 26+",
+      "description": "録音を Mac 上で文字起こしし、元の発言と自然な表現を比較。字幕・学習ブログ・MP4 を書き出せる SpeakLog。Apple silicon、macOS 26 以降に対応。",
       "url": "https://speak.erzhiqian.cc/ja/",
       "image": "https://speak.erzhiqian.cc/assets/icon-512.png",
       "softwareVersion": "0.1.1",
       "downloadUrl": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg",
-      "screenshot": "https://speak.erzhiqian.cc/assets/og-ja.png",
       "inLanguage": "ja",
       "featureList": [
         "単語ごとのタイムスタンプ付きオンデバイス文字起こし",
@@ -70,7 +73,9 @@
         "単語ハイライト・品詞カラー・ふりがな付きの字幕動画",
         "映り込んだ人の顔を自動でぼかし",
         "AI アシスタントと外部エージェント（MCP）"
-      ]
+      ],
+      "processorRequirements": "Apple silicon (arm64)",
+      "releaseNotes": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1"
     },
     {
       "@type": "FAQPage",
@@ -78,27 +83,42 @@
         {
           "@type": "Question",
           "name": "どの言語に対応していますか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "練習する言語は自由に設定できます。英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語などに対応し、作品ごとに変えることもできます。修正理由や文法の説明、翻訳は日本語など、あなたが読める言語で書かれます。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "練習言語は作品ごとに設定でき、英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語などを選べます。文字起こしは macOS の音声対応状況によって異なり、初回はモデルのダウンロードが必要な場合があります。説明・翻訳言語は別に設定できます。"
+          }
         },
         {
           "@type": "Question",
           "name": "録音や動画はアップロードされますか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "されません。文字起こし、動画の描画、顔のぼかし、書き出しはすべて Mac 上で行い、読み込んだファイルもコピーしません。AI 校正をオンにしたときだけ、文字起こしのテキストが選んだ AI プロバイダに送られます。オンデバイスモデルを選べば完全にオフラインです。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "文字起こし、描画、顔のぼかし、書き出しはローカルで行います。クラウド AI には各機能に必要な文字や文脈を送ります。映像分析では抽出フレームや写真を Claude Code または Codex に渡し、全体設定が端末内モデルでも Codex を使います。個人的な素材では自動校正と提供元の設定を確認してください。"
+          }
         },
         {
           "@type": "Question",
           "name": "AI に元の発言を書き換えられませんか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "書き換えられません。話した内容は録音した時点で固定して保存されます。AI の修正は「自然な言い方」という別のレイヤーに理由付きで入り、採用するかどうかはあなたが決めます。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "文字起こしと自然な表現は別のレイヤーで、提案を採用・スキップ・編集できます。ただし AI アシスタントや外部エージェントは字幕などを編集できるため、すべての項目が変更不能ではありません。元の素材を保管し、大事な変更は確認してください。"
+          }
         },
         {
           "@type": "Question",
           "name": "動作環境は？",
-          "acceptedAnswer": { "@type": "Answer", "text": "macOS 26 以降を搭載した Mac が必要です。" }
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "現在の 0.1.1 パッケージは Apple silicon Mac（M シリーズ）と macOS 26 以降が必要で、Intel Mac には対応していません。端末内の文字 AI には Apple Intelligence も必要です。"
+          }
         },
         {
           "@type": "Question",
-          "name": "どこに投稿できますか？",
-          "acceptedAnswer": { "@type": "Answer", "text": "字幕は SRT・VTT・ASS で書き出せ、CapCut・Aegisub・Final Cut で編集を続けられます。ブログは Markdown・HTML のほか、整形済みリッチテキストとして note や Medium に貼り付けたり、X のスレッドに分割したりできます。動画は 16:9・9:16・1:1 の MP4 で、YouTube・Instagram・TikTok などに投稿できます。" }
+          "name": "どの形式で書き出せますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "字幕は SRT・VTT・ASS、ブログは Markdown・HTML に対応します。リッチテキストを note や Medium に貼り付けたり、X のスレッドに分けたりできます。動画は 16:9・9:16・1:1 の MP4 で、アップロードや投稿は自分で行います。"
+          }
         }
       ]
     }
@@ -107,9 +127,9 @@
 </script>
 
 <!-- Google Analytics 4：ID は /assets/analytics.js に記載 -->
-<script src="/assets/analytics.js?v=4"></script>
+<script src="/assets/analytics.js?v=5"></script>
 
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<link rel="stylesheet" href="/assets/site.css?v=4">
 </head>
 <body>
 <a class="skip" href="#main">本文へスキップ</a>
@@ -124,7 +144,7 @@
       <a href="#how">使い方</a>
       <a href="#outputs">作れるもの</a>
       <a href="#features">機能</a>
-      <a href="#faq">よくある質問</a>
+      <a href="#guides">ガイド</a>
       <span class="lang" role="group" aria-label="言語 / Language">
         <a href="/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a>
         <a href="/en/" hreflang="en" lang="en" data-track="language_switch" data-track-location="en">EN</a>
@@ -160,7 +180,7 @@
           </div>
         </div>
         <div class="demo-bar" aria-hidden="true"><span id="tc">0:00</span><div class="track"><div class="fill" id="fill"></div></div><span>0:04</span></div>
-        <figcaption class="legend">
+        <figcaption class="legend"><span class="demo-caption">字幕の表示例です。アプリのスクリーンショットではありません</span>
           <span><i style="background:#8DB6FF"></i>名詞</span>
           <span><i style="background:#6EE0AE"></i>動詞</span>
           <span><i style="background:#FF94C6"></i>形容詞</span>
@@ -170,6 +190,8 @@
       </figure>
     </div>
   </section>
+
+<section class="quick-facts" aria-label="SpeakLog 製品情報"><div class="wrap"><dl><div><dt>公開バージョン</dt><dd>0.1.1</dd></div><div><dt>動作環境</dt><dd>Apple silicon · macOS 26+</dd></div><div><dt>Mac 上で処理</dt><dd>文字起こし・描画・書き出し</dd></div><div><dt>任意の AI 機能</dt><dd>校正・ブログ・分析</dd></div></dl></div></section>
 
   <section id="why" aria-labelledby="why-title">
     <div class="wrap">
@@ -187,7 +209,7 @@
         <article class="card">
           <div class="num">02</div>
           <h3>話したままの記録が残る</h3>
-          <p>実際に話した内容はずっと残ります。AI の修正は隣の別レイヤーに入るだけ。数か月後に見返せば、自分の成長がはっきり分かります。</p>
+          <p>元の認識結果を残し、聞き取りの修正と自然な表現を分けて確認できます。元の素材と練習記録を比べて、そのときの表現や後からの変更を振り返れます。</p>
         </article>
         <article class="card">
           <div class="num">03</div>
@@ -207,11 +229,11 @@
       <ol class="steps" style="list-style:none;padding:0;margin:0">
         <li class="card step">
           <h3>話す</h3>
-          <p>ボイスメモや Vlog、トーク動画をウインドウにドラッグ。アプリで直接録音してもOK。ファイルはコピーされません。</p>
+          <p>ボイスメモや Vlog、トーク動画をウインドウにドラッグ。アプリで直接録音してもOK。読み込んだファイルは元の場所を参照します。</p>
         </li>
         <li class="card step">
           <h3>文字起こし</h3>
-          <p>Mac 上の音声認識で、単語ごとのタイムスタンプと確信度付き。間（ま）で自動的に文を区切ります。6 分の動画なら約 1 秒。</p>
+          <p>Mac 上の音声認識で、単語ごとのタイムスタンプと確信度付き。間（ま）で自動的に文を区切ります。速度は機器、言語、素材によって異なります。</p>
         </li>
         <li class="card step">
           <h3>校正</h3>
@@ -319,7 +341,7 @@
         <h2 id="features-title">「話す」と「学ぶ」のための細かな工夫。</h2>
       </div>
       <div class="features">
-        <div class="feat"><h3>どの言語でも練習</h3><p>英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語……作品ごとに設定できます。</p></div>
+        <div class="feat"><h3>作品ごとに練習言語を設定</h3><p>英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語……作品ごとに設定できます。</p></div>
         <div class="feat"><h3>言語に合わせた注音</h3><p>日本語はふりがな、中国語はピンイン、韓国語・ロシア語はローマ字。英語は品詞カラーだけでもOK。</p></div>
         <div class="feat"><h3>お題で話し始める</h3><p>話すことが浮かばないときは、お題を引くか、レベルに合わせて AI にまとめて出してもらえます。</p></div>
         <div class="feat"><h3>録音中に字幕表示</h3><p>ボタンを押せば録音開始。止めればそのまま作品になります。</p></div>
@@ -335,17 +357,19 @@
     <div class="wrap grid">
       <div class="head" style="margin-bottom:0">
         <div class="kicker">プライバシーとローカル処理</div>
-        <h2 id="privacy-title">声も映像も、あなたの Mac の中に。</h2>
-        <p>文字起こし、動画の描画、顔のぼかし、書き出しはすべてローカルで実行。読み込んだファイルは場所を覚えるだけで、コピーもアップロードもしません。AI は提案するだけで、決めるのはあなた。AI の呼び出しはすべて、モデル・トークン数・概算費用とともに記録されます。</p>
+        <h2 id="privacy-title">ローカル処理と AI の送信先を、機能ごとに。</h2>
+        <p>文字起こし、動画描画、顔のぼかし、書き出しは Mac 上で実行します。クラウドの校正・ブログ・アシスタントは必要な文字と文脈を送信し、映像分析は抽出フレームや写真を Claude Code または Codex に渡します。端末内モデルを選んでも、すべてがオフラインになるわけではありません。 <a href="/ja/privacy/">データ経路と AI の費用を確認</a></p>
       </div>
       <div class="providers" aria-label="AI プロバイダ">
         <div class="prov"><span class="dot" style="background:var(--accent)"></span><div><b>Claude Code CLI</b><span>ログイン済みの claude を使用。Sonnet / Opus / Haiku から選択</span></div></div>
         <div class="prov"><span class="dot" style="background:var(--noun)"></span><div><b>Codex CLI</b><span>ログイン済みの codex を使用</span></div></div>
         <div class="prov"><span class="dot" style="background:var(--adj)"></span><div><b>Anthropic API</b><span>API キーは macOS のキーチェーンに保存</span></div></div>
-        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>オンデバイスモデル</b><span>完全オフラインで無料。翻訳と注釈には十分</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>Apple の端末内文字モデル</b><span>Apple Intelligence が必要。映像分析は CLI を使用</span></div></div>
       </div>
     </div>
   </section>
+
+<section id="guides" aria-labelledby="guides-title"><div class="wrap"><div class="head"><div class="kicker">使い方ガイド</div><h2 id="guides-title">最初の録音から、振り返れる練習記録へ。</h2></div><div class="guide-cards"><a class="card" href="/ja/guides/getting-started/" data-track="guide_click" data-track-location="homepage_guides"><h3>使い始める</h3><p>インストール、言語と AI の設定、最初の読み込み。</p></a><a class="card" href="/ja/guides/speaking-practice/" data-track="guide_click" data-track-location="homepage_guides"><h3>話す練習をする</h3><p>聞き間違いと表現の問題を分けて、直して言い直す。</p></a><a class="card" href="/ja/guides/export/" data-track="guide_click" data-track-location="homepage_guides"><h3>字幕・ブログ・動画を書き出す</h3><p>SRT / VTT / ASS、Markdown / HTML、MP4 を選ぶ。</p></a><a class="card" href="/ja/privacy/" data-track="guide_click" data-track-location="homepage_guides"><h3>プライバシーとデータ経路</h3><p>端末内の処理と、AI に渡る文字や画像を確認。</p></a></div></div></section>
 
   <section id="faq" aria-labelledby="faq-title">
     <div class="wrap">
@@ -354,26 +378,11 @@
         <h2 id="faq-title">気になること</h2>
       </div>
       <div class="faq">
-        <details>
-          <summary>どの言語に対応していますか？</summary>
-          <p>練習する言語は自由に設定できます。英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語などに対応し、作品ごとに変えることもできます。修正理由や文法の説明、翻訳は日本語など、あなたが読める言語で書かれます。</p>
-        </details>
-        <details>
-          <summary>録音や動画はアップロードされますか？</summary>
-          <p>されません。文字起こし、動画の描画、顔のぼかし、書き出しはすべて Mac 上で行い、読み込んだファイルもコピーしません。AI 校正をオンにしたときだけ、文字起こしのテキストが選んだ AI プロバイダに送られます。オンデバイスモデルを選べば完全にオフラインです。</p>
-        </details>
-        <details>
-          <summary>AI に元の発言を書き換えられませんか？</summary>
-          <p>書き換えられません。話した内容は録音した時点で固定して保存されます。AI の修正は「自然な言い方」という別のレイヤーに理由付きで入り、採用するかどうかはあなたが決めます。</p>
-        </details>
-        <details>
-          <summary>動作環境は？</summary>
-          <p>macOS 26 以降を搭載した Mac が必要です。</p>
-        </details>
-        <details>
-          <summary>どこに投稿できますか？</summary>
-          <p>字幕は SRT・VTT・ASS で書き出せ、CapCut・Aegisub・Final Cut で編集を続けられます。ブログは Markdown・HTML のほか、整形済みリッチテキストとして note や Medium に貼り付けたり、X のスレッドに分割したりできます。動画は 16:9・9:16・1:1 の MP4 で、YouTube・Instagram・TikTok などに投稿できます。</p>
-        </details>
+        <details><summary>どの言語に対応していますか？</summary><p>練習言語は作品ごとに設定でき、英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語などを選べます。文字起こしは macOS の音声対応状況によって異なり、初回はモデルのダウンロードが必要な場合があります。説明・翻訳言語は別に設定できます。</p></details>
+        <details><summary>録音や動画はアップロードされますか？</summary><p>文字起こし、描画、顔のぼかし、書き出しはローカルで行います。クラウド AI には各機能に必要な文字や文脈を送ります。映像分析では抽出フレームや写真を Claude Code または Codex に渡し、全体設定が端末内モデルでも Codex を使います。個人的な素材では自動校正と提供元の設定を確認してください。</p></details>
+        <details><summary>AI に元の発言を書き換えられませんか？</summary><p>文字起こしと自然な表現は別のレイヤーで、提案を採用・スキップ・編集できます。ただし AI アシスタントや外部エージェントは字幕などを編集できるため、すべての項目が変更不能ではありません。元の素材を保管し、大事な変更は確認してください。</p></details>
+        <details><summary>動作環境は？</summary><p>現在の 0.1.1 パッケージは Apple silicon Mac（M シリーズ）と macOS 26 以降が必要で、Intel Mac には対応していません。端末内の文字 AI には Apple Intelligence も必要です。</p></details>
+        <details><summary>どの形式で書き出せますか？</summary><p>字幕は SRT・VTT・ASS、ブログは Markdown・HTML に対応します。リッチテキストを note や Medium に貼り付けたり、X のスレッドに分けたりできます。動画は 16:9・9:16・1:1 の MP4 で、アップロードや投稿は自分で行います。</p></details>
       </div>
     </div>
   </section>
@@ -384,8 +393,8 @@
         <img src="/assets/icon-192.png" alt="SpeakLog のアプリアイコン" width="96" height="96" loading="lazy">
         <h2 id="download-title">今日、ひとこと話してみよう。</h2>
         <p>うまく話せなくても大丈夫。まず話して、直すのはあとで。</p>
-        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="download_click" data-track-location="cta">Mac 版をダウンロード</a>
-        <p class="sys">macOS 26 以降が必要です · Apple の公証済み · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="download_click" data-track-location="releases">DMG と過去のバージョン</a></p>
+        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="cta">Mac 版をダウンロード</a>
+        <p class="sys">現在のバージョン <span data-version="0.1.1">0.1.1</span> · Apple silicon（M シリーズ）· macOS 26+ · Apple 公証済みインストーラ · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="release_page_click" data-track-location="releases">DMG と過去のバージョン</a></p>
       </div>
     </div>
   </section>
@@ -396,7 +405,7 @@
     <span>© 2026 SpeakLog（スピークログ）</span>
     <nav aria-label="フッター">
       <a href="#features">機能</a>
-      <a href="#privacy">プライバシー</a>
+      <a href="/ja/privacy/">プライバシーとデータ</a>
       <a href="#faq">よくある質問</a>
       <a href="https://x.com/itsuki_maer" rel="me noopener" target="_blank">X</a>
       <a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a>
@@ -404,6 +413,6 @@
   </div>
 </footer>
 
-<script src="/assets/site.js?v=3" defer></script>
+<script src="/assets/site.js?v=4" defer></script>
 </body>
 </html>

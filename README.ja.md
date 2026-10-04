@@ -16,7 +16,16 @@ SpeakLog は語学学習者のための Mac アプリです。外国語で話し
 | ディスクイメージ | [Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest) から `SpeakLog-<バージョン>.dmg` をダウンロードし、アプリを「アプリケーション」にドラッグ |
 | 過去のバージョン | [すべての Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases)（各バージョンに `SHA256SUMS` 付き） |
 
-macOS 26 以降が必要です。インストーラとディスクイメージは Developer ID で署名され、Apple の公証を受けています。
+0.1.1 には Apple silicon Mac（M シリーズ）と macOS 26 以降が必要です。現在のパッケージは Intel Mac に対応していません。インストーラとディスクイメージは Developer ID で署名され、Apple の公証を受けています。
+
+## 使い方ガイド
+
+- [使い始める](https://speak.erzhiqian.cc/ja/guides/getting-started/)
+- [話す練習をする](https://speak.erzhiqian.cc/ja/guides/speaking-practice/)
+- [字幕・ブログ・動画を書き出す](https://speak.erzhiqian.cc/ja/guides/export/)
+- [プライバシーとデータ経路](https://speak.erzhiqian.cc/ja/privacy/)
+
+文字起こし、描画、書き出しはローカルで実行します。クラウド AI は必要な文字や文脈を送り、映像分析は抽出フレームや写真を Claude Code または Codex に渡します。全体設定が端末内モデルでも同様です。自動 AI 校正は初期設定でオンのため、個人的な素材を読み込む前に「設定 → AI」を確認してください。
 
 ## このリポジトリの内容
 

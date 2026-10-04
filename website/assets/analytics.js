@@ -4,6 +4,8 @@ window.SPEAKLOG_GA_ID = 'G-MB3812Z1TL';
 window.dataLayer = window.dataLayer || [];
 function gtag() { dataLayer.push(arguments); }
 (function () {
+  // Keep local tests and preview deployments out of production analytics.
+  if (window.location.hostname !== 'speak.erzhiqian.cc') return;
   var id = window.SPEAKLOG_GA_ID;
   if (!id || /^G-X+$/.test(id)) return;
   var s = document.createElement('script');
