@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeakLog 入門：Mac で読み込み・文字起こし・校正</title>
+<meta name="description" content="SpeakLog の動作環境と AI 設定を確認し、録音や動画の読み込み、ローカル文字起こし、字幕の見直しから最初の書き出しまで進めます。">
+<link rel="canonical" href="https://speak.erzhiqian.cc/ja/guides/getting-started/">
+<link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/guides/getting-started/">
+<link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/guides/getting-started/">
+<link rel="alternate" hreflang="ja" href="https://speak.erzhiqian.cc/ja/guides/getting-started/">
+<link rel="alternate" hreflang="x-default" href="https://speak.erzhiqian.cc/en/guides/getting-started/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1B1838">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SpeakLog">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://speak.erzhiqian.cc/ja/guides/getting-started/">
+<meta property="og:title" content="SpeakLog 入門：Mac で読み込み・文字起こし・校正">
+<meta property="og:description" content="SpeakLog の動作環境と AI 設定を確認し、録音や動画の読み込み、ローカル文字起こし、字幕の見直しから最初の書き出しまで進めます。">
+<meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpeakLog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpeakLog 入門：Mac で読み込み・文字起こし・校正">
+<meta name="twitter:description" content="SpeakLog の動作環境と AI 設定を確認し、録音や動画の読み込み、ローカル文字起こし、字幕の見直しから最初の書き出しまで進めます。">
+<meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/site.css?v=4">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://speak.erzhiqian.cc/ja/guides/getting-started/#page",
+      "url": "https://speak.erzhiqian.cc/ja/guides/getting-started/",
+      "headline": "SpeakLog 入門：Mac で読み込み・文字起こし・校正",
+      "description": "SpeakLog の動作環境と AI 設定を確認し、録音や動画の読み込み、ローカル文字起こし、字幕の見直しから最初の書き出しまで進めます。",
+      "inLanguage": "ja",
+      "dateModified": "2026-10-04",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SpeakLog",
+        "url": "https://speak.erzhiqian.cc/"
+      },
+      "mainEntityOfPage": "https://speak.erzhiqian.cc/ja/guides/getting-started/",
+      "isPartOf": {
+        "@id": "https://speak.erzhiqian.cc/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://speak.erzhiqian.cc/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SpeakLog 入門：Mac で読み込み・文字起こし・校正",
+          "item": "https://speak.erzhiqian.cc/ja/guides/getting-started/"
+        }
+      ]
+    }
+  ]
+}</script>
+<script src="/assets/analytics.js?v=5"></script>
+</head>
+<body class="guide-page">
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="top"><div class="wrap"><a class="logo" href="/ja/"><img src="/assets/icon-192.png" alt="" width="30" height="30">SpeakLog</a><nav aria-label="使い方ガイド"><a href="/ja/#guides">使い方ガイド</a><span class="lang" role="group" aria-label="Language"><a href="/guides/getting-started/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a><a href="/en/guides/getting-started/" hreflang="en" lang="en" data-track="language_switch" data-track-location="en">EN</a><a href="/ja/guides/getting-started/" hreflang="ja" lang="ja" aria-current="true">日本語</a></span></nav></div></header>
+<main id="main" class="guide wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/ja/">ホーム</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog 入門：Mac で読み込み・文字起こし・校正</span></nav>
+<article>
+<header class="guide-head"><p class="kicker">使い方ガイド</p><h1>SpeakLog 入門：Mac で読み込み・文字起こし・校正</h1><p class="guide-intro">SpeakLog は、学習中の言語で話した録音や動画を、振り返れる練習記録にします。最初に設定を確認し、短い素材で文字起こしを試してから、必要な形式で書き出しましょう。</p><p class="guide-meta">SpeakLog <span data-version="0.1.1">0.1.1</span> 対応 · 確認日：2026年10月4日 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1" data-track="release_page_click" data-track-location="guide_version">0.1.1 リリースノート</a></p></header>
+<nav class="guide-toc card" aria-label="このページの内容"><ol><li><a href="#section-1">インストールと動作環境</a></li><li><a href="#section-2">言語と AI の設定を先に確認</a></li><li><a href="#section-3">録音や動画を読み込む</a></li><li><a href="#section-4">文字を確認してから書き出す</a></li><li><a href="#section-5">うまく動かないとき</a></li></ol></nav>
+<section id="section-1"><h2>1. インストールと動作環境</h2><p>現在の公開版は 0.1.1 で、Apple silicon Mac（M シリーズ）と macOS 26 以降が必要です。現在のパッケージは Intel Mac に対応していません。PKG をダウンロードし、インストーラの案内に従ってください。リリースページには DMG と SHA256SUMS もあります。</p><p>初めて使う言語では、システムの音声モデルをダウンロードする場合があります。文字起こしできる言語はアプリが確認したシステムの対応状況によります。練習言語に設定できても、必ずオフライン認識できるとは限りません。</p></section>
+<section id="section-2"><h2>2. 言語と AI の設定を先に確認</h2><p>練習言語、説明言語、学習レベルを設定します。修正理由、翻訳、語句の意味には説明言語が使われます。</p><p>読み込み後の AI 自動校正は初期設定でオンです。必要に応じて、読み込む前に「設定 → AI」でオフにしてください。個人的な素材を扱う前に、自動校正とプロバイダを確認してください。まず文字起こしだけ試す場合は自動校正をオフにします。クラウド AI の入力は選択した提供元へ送られます。</p><p>初期設定の提供元は Claude Code です。Claude Code や Codex を使う前に、それぞれの CLI をインストールしてログインし、「設定 → AI」のテストボタンで接続を確認してください。Anthropic API には自分の API キーを使います。各提供元とオンデバイスモデルでは利用条件が異なります。端末内モデルには有効な Apple Intelligence と利用可能なモデルが必要です。映像分析は別の CLI 経路を使うため、全体設定を端末内モデルにしても、すべての機能がオフラインになるわけではありません。</p></section>
+<section id="section-3"><h2>3. 録音や動画を読み込む</h2><p>ホームの読み込み欄でファイルを選ぶか、ウィンドウにドラッグします。複数選ぶと一つのプロジェクトになり、素材ごとに処理結果を保存します。アプリ内では音声を録音できます。動画は別のアプリで撮影してから読み込みます。</p><p>読み込んだ元の素材は通常、元の場所を参照します。ファイルや保存先のドライブを利用できる状態にしてください。アプリ内の新しい録音はプロジェクト内に保存されます。まず短い素材で言語と音質を確認すると安心です。</p></section>
+<section id="section-4"><h2>4. 文字を確認してから書き出す</h2><p>元の音声を聞き、名前や単語の聞き間違い、文の区切りを確認します。その後で自然な言い方と修正理由を比べます。AI の提案にも誤りがあるため、意味が変わっていないか確かめてください。</p><p>字幕、ブログ、動画はそれぞれ独立して作れます。書き出しても自動投稿はされません。コピーまたは保存した内容を、投稿先へ自分でアップロードします。</p></section>
+<section id="section-5"><h2>うまく動かないとき</h2><p>文字起こしでは、対応言語、音声モデルの準備、元のファイルの場所、録音権限を確認します。AI では、まず設定画面のテスト機能でプロバイダの動作を確認してください。</p><p>処理時間はチップ、素材の長さ、言語、モデルの状態によって変わります。開発中の単発の測定値を一般的な速度保証としては扱っていません。</p></section>
+</article>
+<aside class="guide-related"><h2>あわせて読む</h2><ul><li><a href="/ja/guides/speaking-practice/" data-track="guide_click" data-track-location="related_guides">SpeakLog で話す練習：録音・比較・言い直し</a></li><li><a href="/ja/guides/export/" data-track="guide_click" data-track-location="related_guides">SpeakLog 書き出しガイド：字幕・ブログ・MP4</a></li><li><a href="/ja/privacy/" data-track="guide_click" data-track-location="related_guides">SpeakLog のプライバシー：ローカル処理と AI のデータ経路</a></li></ul><a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="guide_footer">Mac 版をダウンロード</a></aside>
+</main>
+<footer><div class="wrap"><span>© 2026 SpeakLog</span><nav aria-label="Footer"><a href="/ja/privacy/">プライバシーとデータ</a><a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a></nav></div></footer>
+<script src="/assets/site.js?v=4" defer></script>
+</body>
+</html>

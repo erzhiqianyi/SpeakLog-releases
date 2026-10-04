@@ -7,8 +7,8 @@
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#1B1838">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
-<script src="/assets/analytics.js?v=4"></script>
-<link rel="stylesheet" href="/assets/site.css?v=3">
+<script src="/assets/analytics.js?v=5"></script>
+<link rel="stylesheet" href="/assets/site.css?v=4">
 <style>
   .nf { min-height: 100vh; margin-top: 0; padding: 0; display: grid; place-items: center; text-align: center; }
   .nf .wrap { display: block; }
@@ -31,6 +31,6 @@
     </div>
   </div>
 </main>
-<script>gtag('event', 'page_not_found', { path: location.pathname });</script>
+<script>if (typeof window.gtag === 'function') { try { window.gtag('event', 'page_not_found', { path: location.pathname, page_language: document.documentElement.lang }); } catch (_) {} }</script>
 </body>
 </html>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeakLog 書き出しガイド：字幕・ブログ・MP4</title>
+<meta name="description" content="元の発言、自然な表現、二言語字幕を選び、SRT・VTT・ASS・Markdown・HTML・MP4 を書き出す方法と、note・Medium・X へのコピー手順を説明します。">
+<link rel="canonical" href="https://speak.erzhiqian.cc/ja/guides/export/">
+<link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/guides/export/">
+<link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/guides/export/">
+<link rel="alternate" hreflang="ja" href="https://speak.erzhiqian.cc/ja/guides/export/">
+<link rel="alternate" hreflang="x-default" href="https://speak.erzhiqian.cc/en/guides/export/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1B1838">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="SpeakLog">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://speak.erzhiqian.cc/ja/guides/export/">
+<meta property="og:title" content="SpeakLog 書き出しガイド：字幕・ブログ・MP4">
+<meta property="og:description" content="元の発言、自然な表現、二言語字幕を選び、SRT・VTT・ASS・Markdown・HTML・MP4 を書き出す方法と、note・Medium・X へのコピー手順を説明します。">
+<meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpeakLog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpeakLog 書き出しガイド：字幕・ブログ・MP4">
+<meta name="twitter:description" content="元の発言、自然な表現、二言語字幕を選び、SRT・VTT・ASS・Markdown・HTML・MP4 を書き出す方法と、note・Medium・X へのコピー手順を説明します。">
+<meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/site.css?v=4">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://speak.erzhiqian.cc/ja/guides/export/#page",
+      "url": "https://speak.erzhiqian.cc/ja/guides/export/",
+      "headline": "SpeakLog 書き出しガイド：字幕・ブログ・MP4",
+      "description": "元の発言、自然な表現、二言語字幕を選び、SRT・VTT・ASS・Markdown・HTML・MP4 を書き出す方法と、note・Medium・X へのコピー手順を説明します。",
+      "inLanguage": "ja",
+      "dateModified": "2026-10-04",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SpeakLog",
+        "url": "https://speak.erzhiqian.cc/"
+      },
+      "mainEntityOfPage": "https://speak.erzhiqian.cc/ja/guides/export/",
+      "isPartOf": {
+        "@id": "https://speak.erzhiqian.cc/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://speak.erzhiqian.cc/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SpeakLog 書き出しガイド：字幕・ブログ・MP4",
+          "item": "https://speak.erzhiqian.cc/ja/guides/export/"
+        }
+      ]
+    }
+  ]
+}</script>
+<script src="/assets/analytics.js?v=5"></script>
+</head>
+<body class="guide-page">
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="top"><div class="wrap"><a class="logo" href="/ja/"><img src="/assets/icon-192.png" alt="" width="30" height="30">SpeakLog</a><nav aria-label="使い方ガイド"><a href="/ja/#guides">使い方ガイド</a><span class="lang" role="group" aria-label="Language"><a href="/guides/export/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a><a href="/en/guides/export/" hreflang="en" lang="en" data-track="language_switch" data-track-location="en">EN</a><a href="/ja/guides/export/" hreflang="ja" lang="ja" aria-current="true">日本語</a></span></nav></div></header>
+<main id="main" class="guide wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/ja/">ホーム</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog 書き出しガイド：字幕・ブログ・MP4</span></nav>
+<article>
+<header class="guide-head"><p class="kicker">使い方ガイド</p><h1>SpeakLog 書き出しガイド：字幕・ブログ・MP4</h1><p class="guide-intro">字幕、学習ブログ、動画はそれぞれ独立した成果物です。先に文章を確認してから、投稿先に合う形式を選びます。SpeakLog はファイルの保存やコピー用の内容を用意しますが、自動投稿はしません。</p><p class="guide-meta">SpeakLog <span data-version="0.1.1">0.1.1</span> 対応 · 確認日：2026年10月4日 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1" data-track="release_page_click" data-track-location="guide_version">0.1.1 リリースノート</a></p></header>
+<nav class="guide-toc card" aria-label="このページの内容"><ol><li><a href="#section-1">書き出す前に確認</a></li><li><a href="#section-2">字幕：SRT・VTT・ASS</a></li><li><a href="#section-3">ブログ：ファイルまたはクリップボード</a></li><li><a href="#section-4">動画：プレビューから MP4 へ</a></li><li><a href="#section-5">編集できるプロジェクトも保存</a></li></ol></nav>
+<section id="section-1"><h2>書き出す前に確認</h2><p>名前、専門用語、字幕の時間、改稿で意味が変わっていないかを確認します。元の発言、自然な言い方、説明言語の翻訳を加えた二言語版から選びます。</p><p>私的な会話、映っている人、住所、画面内の文字も確認してください。顔のぼかしだけでは、すべての個人情報を隠せません。</p></section>
+<section id="section-2"><h2>字幕：SRT・VTT・ASS</h2><p>SRT は一般的な文単位の字幕形式、VTT は Web 動画でよく使われる形式です。品詞カラーやキーワードの装飾を残したい場合は ASS を選べます。実際の表示は再生・編集ソフトに依存します。</p><p>対応する編集ソフトや動画サービスへ字幕ファイルを読み込みます。単語ハイライト、注音、配色を映像に固定したい場合は、プレビューを確認して字幕動画を書き出します。</p></section>
+<section id="section-3"><h2>ブログ：ファイルまたはクリップボード</h2><p>確認した字幕から学習ブログを作り、本文、対照文、文法メモ、語彙を見直します。生成や書き直しには選択した AI プロバイダを使います。</p><p>Markdown や HTML はローカル保存や対応する公開手順に使えます。note や Medium ではリッチテキストをコピーして編集画面に貼り付けます。X では番号付きの投稿に分け、一件ずつコピーできます。</p><p>コピーしただけでは投稿完了ではありません。投稿先の編集画面で書式が変わる場合があるため、公開前にレイアウト、画像、リンクを確認してください。</p></section>
+<section id="section-4"><h2>動画：プレビューから MP4 へ</h2><p>元の動画に字幕を付ける、字幕だけの背景にする、別の映像に差し替える、という画面を選べます。16:9、9:16、1:1 の画幅、字幕のレイヤー、注音、翻訳、色を設定します。</p><p>カット、間、音声、ぼかしを確認してから MP4 を書き出します。描画は Mac 上で実行され、時間は長さ、解像度、効果、機器によって変わります。</p><p>MP4 は自分で投稿先へアップロードします。画幅、長さ、形式の要件は変わることがあるため、投稿先の最新の案内を確認してください。</p></section>
+<section id="section-5"><h2>編集できるプロジェクトも保存</h2><p>MP4 だけでは字幕の編集状態を完全には戻せません。後で直す可能性があれば、SpeakLog のプロジェクトと参照先の元の素材も保管します。</p><p>リリースページでバージョンとチェックサムを確認できます。不具合の報告には、バージョン、出力形式、再現手順を添えてください。私的な映像を公開する必要はありません。</p></section>
+</article>
+<aside class="guide-related"><h2>あわせて読む</h2><ul><li><a href="/ja/guides/getting-started/" data-track="guide_click" data-track-location="related_guides">SpeakLog 入門：Mac で読み込み・文字起こし・校正</a></li><li><a href="/ja/guides/speaking-practice/" data-track="guide_click" data-track-location="related_guides">SpeakLog で話す練習：録音・比較・言い直し</a></li><li><a href="/ja/privacy/" data-track="guide_click" data-track-location="related_guides">SpeakLog のプライバシー：ローカル処理と AI のデータ経路</a></li></ul><a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="guide_footer">Mac 版をダウンロード</a></aside>
+</main>
+<footer><div class="wrap"><span>© 2026 SpeakLog</span><nav aria-label="Footer"><a href="/ja/privacy/">プライバシーとデータ</a><a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a></nav></div></footer>
+<script src="/assets/site.js?v=4" defer></script>
+</body>
+</html>

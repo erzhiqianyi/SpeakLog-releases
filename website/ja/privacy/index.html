@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SpeakLog のプライバシー：ローカル処理と AI のデータ経路</title>
+<meta name="description" content="Mac 上で処理する機能、AI に文字や抽出画像を渡す機能、プロジェクトのログ、外部エージェント、サイトのアクセス解析について説明します。">
+<link rel="canonical" href="https://speak.erzhiqian.cc/ja/privacy/">
+<link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/privacy/">
+<link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/privacy/">
+<link rel="alternate" hreflang="ja" href="https://speak.erzhiqian.cc/ja/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://speak.erzhiqian.cc/en/privacy/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1B1838">
+<meta name="color-scheme" content="light dark">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpeakLog">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:url" content="https://speak.erzhiqian.cc/ja/privacy/">
+<meta property="og:title" content="SpeakLog のプライバシー：ローカル処理と AI のデータ経路">
+<meta property="og:description" content="Mac 上で処理する機能、AI に文字や抽出画像を渡す機能、プロジェクトのログ、外部エージェント、サイトのアクセス解析について説明します。">
+<meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpeakLog">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpeakLog のプライバシー：ローカル処理と AI のデータ経路">
+<meta name="twitter:description" content="Mac 上で処理する機能、AI に文字や抽出画像を渡す機能、プロジェクトのログ、外部エージェント、サイトのアクセス解析について説明します。">
+<meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-ja.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="stylesheet" href="/assets/site.css?v=4">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://speak.erzhiqian.cc/ja/privacy/#page",
+      "url": "https://speak.erzhiqian.cc/ja/privacy/",
+      "headline": "SpeakLog のプライバシー：ローカル処理と AI のデータ経路",
+      "description": "Mac 上で処理する機能、AI に文字や抽出画像を渡す機能、プロジェクトのログ、外部エージェント、サイトのアクセス解析について説明します。",
+      "inLanguage": "ja",
+      "dateModified": "2026-10-04",
+      "publisher": {
+        "@type": "Organization",
+        "name": "SpeakLog",
+        "url": "https://speak.erzhiqian.cc/"
+      },
+      "mainEntityOfPage": "https://speak.erzhiqian.cc/ja/privacy/",
+      "isPartOf": {
+        "@id": "https://speak.erzhiqian.cc/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://speak.erzhiqian.cc/ja/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "SpeakLog のプライバシー：ローカル処理と AI のデータ経路",
+          "item": "https://speak.erzhiqian.cc/ja/privacy/"
+        }
+      ]
+    }
+  ]
+}</script>
+<script src="/assets/analytics.js?v=5"></script>
+</head>
+<body class="guide-page">
+<a class="skip" href="#main">本文へスキップ</a>
+<header class="top"><div class="wrap"><a class="logo" href="/ja/"><img src="/assets/icon-192.png" alt="" width="30" height="30">SpeakLog</a><nav aria-label="使い方ガイド"><a href="/ja/#guides">使い方ガイド</a><span class="lang" role="group" aria-label="Language"><a href="/privacy/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a><a href="/en/privacy/" hreflang="en" lang="en" data-track="language_switch" data-track-location="en">EN</a><a href="/ja/privacy/" hreflang="ja" lang="ja" aria-current="true">日本語</a></span></nav></div></header>
+<main id="main" class="guide wrap">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/ja/">ホーム</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog のプライバシー：ローカル処理と AI のデータ経路</span></nav>
+<article>
+<header class="guide-head"><p class="kicker">使い方ガイド</p><h1>SpeakLog のプライバシー：ローカル処理と AI のデータ経路</h1><p class="guide-intro">文字起こしが端末内で動いても、すべての機能がオフラインとは限りません。SpeakLog の文字起こし、動画描画、顔のぼかしは Mac 上で動きます。クラウド AI、映像分析、外部エージェントは、関連する内容を各提供元へ渡す場合があります。</p><p class="guide-meta">SpeakLog <span data-version="0.1.1">0.1.1</span> 対応 · 確認日：2026年10月4日 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1" data-track="release_page_click" data-track-location="guide_version">0.1.1 リリースノート</a></p></header>
+<nav class="guide-toc card" aria-label="このページの内容"><ol><li><a href="#section-1">Mac 上で処理すること</a></li><li><a href="#section-2">AI 提供元へ渡る可能性がある内容</a></li><li><a href="#section-3">プロジェクト、ログ、外部エージェント</a></li><li><a href="#section-4">料金と制御の範囲</a></li><li><a href="#section-5">このサイトのアクセス解析</a></li></ol></nav>
+<section id="section-1"><h2>Mac 上で処理すること</h2><p>音声の文字起こし、動画描画、顔の検出とぼかし、ファイルの書き出しはローカルで処理します。言語の初回利用時には、システムの音声モデルをダウンロードする場合があります。</p><p>読み込んだ元の素材は通常、元の場所を参照し、読み込みだけでファイル全体をアップロードするわけではありません。アプリ内の録音、プロジェクト、出力、分析用の抽出画像はローカルに保存されます。</p></section>
+<section id="section-2"><h2>AI 提供元へ渡る可能性がある内容</h2><p>校正、翻訳、注釈、ブログ生成、内容分析、お題生成、アシスタントとの会話では、機能に必要な文字や文脈を渡します。クラウドの経路には Claude Code、Codex CLI、Anthropic API があります。CLI にログインしていることは、オフライン処理を意味しません。</p><p>映像分析では動画からフレームを抽出するか、写真を読み取り、画像対応の CLI へ渡します。全体のプロバイダを Anthropic API または端末内モデルにしていても、映像分析は Codex CLI を使います。文字だけの送信ではありませんが、元の動画全体をアップロードすることと同じではありません。</p><p>端末内モデルでローカルに処理されるのは、そのモデルが担当する文字タスクです。選択しても外部呼び出しを一律に止めるわけではありません。読み込み後の自動校正もあるため、機微な内容では不要な自動処理を切り、設定を確認してください。</p></section>
+<section id="section-3"><h2>プロジェクト、ログ、外部エージェント</h2><p>標準の保存先は Mac の Movies/SpeakLog です。AI の利用記録には、プロンプト、元の出力、モデル、トークン数、概算費用が含まれる場合があります。プロジェクトやログにも私的な内容が残り得ます。</p><p>MCP はアプリとローカルで通信しますが、接続した外部エージェントはプロジェクトを読み書きできます。その文脈がエージェントの提供元へ送られる場合もあります。信頼できるクライアントだけ接続し、データ設定を確認してください。</p><p>Anthropic API キーは macOS のキーチェーンに保存します。キー、プロジェクトのログ、私的な素材を公開の不具合報告に貼らないでください。</p></section>
+<section id="section-4"><h2>料金と制御の範囲</h2><p>端末内モデルが処理する文字タスクにはクラウド API 呼び出し料金は発生しません。クラウドの契約、API 料金、利用枠、データ保存規則は提供元によります。アプリの費用表示は概算で、提供元の最終請求額ではありません。</p><p>このページは 0.1.1 の機能とデータ経路を説明するものです。第三者の保存方針を保証したり、今後のアプリ価格を発表したりするものではありません。各サービスの規約とプライバシー設定を確認してください。</p></section>
+<section id="section-5"><h2>このサイトのアクセス解析</h2><p>製品サイトでは Google Analytics 4 を使い、閲覧と操作を計測します。ページ言語、インストーラのクリック、リリースページへの移動、言語切り替え、FAQ の展開などが対象です。ダウンロードのクリックはインストール完了を意味しません。</p><p>サイトは Google の解析スクリプトを読み込みますが、ブラウザやコンテンツブロッカーが止める場合があります。Mac アプリの録音やプロジェクト処理とは別のデータ経路です。お問い合わせは speaklog@erzhiqian.cc へお願いします。</p></section>
+</article>
+<aside class="guide-related"><h2>あわせて読む</h2><ul><li><a href="/ja/guides/getting-started/" data-track="guide_click" data-track-location="related_guides">SpeakLog 入門：Mac で読み込み・文字起こし・校正</a></li><li><a href="/ja/guides/speaking-practice/" data-track="guide_click" data-track-location="related_guides">SpeakLog で話す練習：録音・比較・言い直し</a></li><li><a href="/ja/guides/export/" data-track="guide_click" data-track-location="related_guides">SpeakLog 書き出しガイド：字幕・ブログ・MP4</a></li></ul><a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="guide_footer">Mac 版をダウンロード</a></aside>
+</main>
+<footer><div class="wrap"><span>© 2026 SpeakLog</span><nav aria-label="Footer"><a href="/ja/privacy/">プライバシーとデータ</a><a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a></nav></div></footer>
+<script src="/assets/site.js?v=4" defer></script>
+</body>
+</html>
