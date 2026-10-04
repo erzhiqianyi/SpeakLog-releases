@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>页面不存在 · Page not found · SpeakLog</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1B1838">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<script src="/assets/analytics.js?v=3"></script>
+<link rel="stylesheet" href="/assets/site.css?v=3">
+<style>
+  .nf { min-height: 100vh; margin-top: 0; padding: 0; display: grid; place-items: center; text-align: center; }
+  .nf .wrap { display: block; }
+  .nf img { width: 88px; height: 88px; margin: 0 auto 28px; }
+  .nf h1 { font-size: clamp(32px, 6vw, 48px); }
+  .nf p { color: rgb(255 255 255 / .78); margin: 14px 0 32px; }
+  .nf .ctas { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+</style>
+</head>
+<body>
+<main class="hero nf">
+  <div class="wrap">
+    <img src="/assets/icon-192.png" alt="SpeakLog" width="88" height="88">
+    <h1>404</h1>
+    <p>页面不存在 · Page not found · <span lang="ja">ページが見つかりません</span></p>
+    <div class="ctas">
+      <a class="btn btn-primary" href="/">中文首页</a>
+      <a class="btn btn-ghost" href="/en/" lang="en">English</a>
+      <a class="btn btn-ghost" href="/ja/" lang="ja">日本語</a>
+    </div>
+  </div>
+</main>
+<script>gtag('event', 'page_not_found', { path: location.pathname });</script>
+</body>
+</html>

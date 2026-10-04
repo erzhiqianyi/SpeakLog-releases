@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>SpeakLog — Turn the language you speak into subtitles, blog posts and videos | Mac app for language learners</title>
+<meta name="description" content="SpeakLog is a Mac app for language learners: speak first, polish it later. It transcribes your recordings and videos on your Mac, puts what you said next to a more natural version, and exports subtitles, a study blog post and word-highlighted subtitle videos. Japanese, English, Chinese, Korean and more.">
+<link rel="canonical" href="https://speak.erzhiqian.cc/en/">
+<link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/">
+<link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/">
+<link rel="alternate" hreflang="ja" href="https://speak.erzhiqian.cc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://speak.erzhiqian.cc/en/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1B1838">
+<meta name="color-scheme" content="light dark">
+
+<!-- Open Graph / social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpeakLog">
+<meta property="og:locale" content="en_US">
+<meta property="og:locale:alternate" content="zh_CN">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:url" content="https://speak.erzhiqian.cc/en/">
+<meta property="og:title" content="SpeakLog — Speak first. Polish it later.">
+<meta property="og:description" content="Turn the foreign language you speak into subtitles, a study blog post and word-highlighted subtitle videos. A Mac app that transcribes and renders on your Mac.">
+<meta property="og:image" content="https://speak.erzhiqian.cc/assets/og-en.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpeakLog: Speak first. Polish it later.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpeakLog — Speak first. Polish it later.">
+<meta name="twitter:description" content="Turn the foreign language you speak into subtitles, a study blog post and word-highlighted subtitle videos.">
+<meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og-en.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://speak.erzhiqian.cc/#website",
+      "url": "https://speak.erzhiqian.cc/",
+      "name": "SpeakLog",
+      "inLanguage": ["zh-CN", "en", "ja"]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://speak.erzhiqian.cc/#app",
+      "name": "SpeakLog",
+      "alternateName": "スピークログ",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "macOS 26 or later",
+      "description": "A Mac app for language learners: import or record what you say in a foreign language, transcribe it on your Mac, compare it with a more natural version, and export subtitles, a study blog post and word-highlighted subtitle videos.",
+      "url": "https://speak.erzhiqian.cc/en/",
+      "image": "https://speak.erzhiqian.cc/assets/icon-512.png",
+      "softwareVersion": "0.1.1",
+      "downloadUrl": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg",
+      "screenshot": "https://speak.erzhiqian.cc/assets/og-en.png",
+      "inLanguage": "en",
+      "featureList": [
+        "On-device transcription with word-level timestamps",
+        "Two subtitle layers: what you said and a natural version",
+        "SRT / VTT / ASS subtitle export",
+        "Study blog posts for note, Medium and X",
+        "Karaoke-style subtitle videos colored by part of speech, with readings",
+        "Automatic face blurring for passers-by",
+        "AI assistant and external agents (MCP)"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Which languages does SpeakLog support?",
+          "acceptedAnswer": { "@type": "Answer", "text": "You choose the language you practice: English, Japanese, Chinese, Korean, French, Spanish, German and more, set per project. Explanations, grammar notes and translations are written in a language you understand." }
+        },
+        {
+          "@type": "Question",
+          "name": "Are my recordings and videos uploaded?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Transcription, video rendering, face blurring and export all happen on your Mac, and imported files are not copied. Only when you turn on AI review is the transcript sent to the AI provider you picked; with the on-device model everything stays offline." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will the AI overwrite what I actually said?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Your original words are saved the moment you record them. AI suggestions live in a separate natural layer, each with a reason, and you decide whether to accept or skip them." }
+        },
+        {
+          "@type": "Question",
+          "name": "What do I need to run it?",
+          "acceptedAnswer": { "@type": "Answer", "text": "A Mac running macOS 26 or later." }
+        },
+        {
+          "@type": "Question",
+          "name": "Where can I publish what I make?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Subtitles export as SRT, VTT or ASS for CapCut, Aegisub or Final Cut. Blog posts export as Markdown or HTML, copy as rich text into note or Medium, or split into an X thread. Videos export as MP4 in 16:9, 9:16 or 1:1 for YouTube, Instagram, TikTok and more." }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Google Analytics 4: the ID lives in /assets/analytics.js -->
+<script src="/assets/analytics.js?v=3"></script>
+
+<link rel="stylesheet" href="/assets/site.css?v=3">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/en/" aria-label="SpeakLog home">
+      <img src="/assets/icon-192.png" alt="" width="30" height="30">
+      SpeakLog
+    </a>
+    <nav aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#outputs">What you make</a>
+      <a href="#features">Features</a>
+      <a href="#faq">FAQ</a>
+      <span class="lang" role="group" aria-label="Language">
+        <a href="/" hreflang="zh-CN" lang="zh-CN" data-track="language_switch" data-track-location="zh-CN">中文</a>
+        <a href="/en/" hreflang="en" lang="en" aria-current="true">EN</a>
+        <a href="/ja/" hreflang="ja" lang="ja" data-track="language_switch" data-track-location="ja">日本語</a>
+      </span>
+      <a class="btn btn-primary btn-sm" href="#download" data-track="cta_click" data-track-location="header">Get it for Mac</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">A Mac app for language learners</span>
+        <h1 id="hero-title">Speak first.<br><em>Polish it later.</em></h1>
+        <p class="lede">Turn the foreign language you speak into subtitles, a study blog post and word-highlighted subtitle videos. Even if you stumble, SpeakLog transcribes it, puts what you said next to a more natural version, and helps you fix it one sentence at a time.</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#download" data-track="cta_click" data-track-location="hero">Get it for Mac</a>
+          <a class="btn btn-ghost" href="#how" data-track="cta_click" data-track-location="hero_secondary">See how it works</a>
+        </div>
+        <p class="note">Transcribes, renders and exports on your Mac · Japanese, English, Chinese, Korean and more</p>
+      </div>
+
+      <figure class="demo" aria-label="Word-highlighted subtitle example">
+        <div class="demo-screen">
+          <span class="demo-tag">Video · Preview</span>
+          <div class="sub">
+            <div class="sub-line" lang="ja" id="karaoke">
+              <span class="w n"><ruby>昨日<rt>きのう</rt></ruby></span><span class="w p">、</span><span class="w n"><ruby>友達<rt>ともだち</rt></ruby></span><span class="w p">と</span><span class="w a"><ruby>新<rt>あたら</rt></ruby>しい</span><span class="w n">カフェ</span><span class="w p">に</span><span class="w v"><ruby>行<rt>い</rt></ruby>きました</span>
+            </div>
+            <p class="sub-tr">Yesterday I went to a new café with a friend.</p>
+          </div>
+        </div>
+        <div class="demo-bar" aria-hidden="true"><span id="tc">0:00</span><div class="track"><div class="fill" id="fill"></div></div><span>0:04</span></div>
+        <figcaption class="legend">
+          <span><i style="background:#8DB6FF"></i>Noun</span>
+          <span><i style="background:#6EE0AE"></i>Verb</span>
+          <span><i style="background:#FF94C6"></i>Adjective</span>
+          <span><i style="background:#CFC9E6"></i>Particle</span>
+          <span><i style="background:var(--glow)"></i>Now reading</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">Why SpeakLog</div>
+        <h2 id="why-title">What learners lack most is speaking.</h2>
+        <p>Many people wait until they're ready and can say it right, so they never say it at all. Those who do speak are left with nothing afterwards: no idea what went wrong, and nothing to show for it.</p>
+      </div>
+      <div class="why">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Just talk, no script</h3>
+          <p>Record a quick take, or import a vlog or talking-head video you've already shot. No script, no waiting until you're "ready".</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>Your words stay yours</h3>
+          <p>What you actually said is always kept. AI edits sit in a separate layer next to it, so months later you can see exactly how far you've come.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>Polished, then published</h3>
+          <p>Your original plus the improved version is a genuine study record. Export it as subtitles, a blog post or a video for the platforms you already use.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="how-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">How it works</div>
+        <h2 id="how-title">Four steps from a recording to a finished piece.</h2>
+      </div>
+      <ol class="steps" style="list-style:none;padding:0;margin:0">
+        <li class="card step">
+          <h3>Speak</h3>
+          <p>Drag in a voice memo, vlog or talking-head video, or hit record in the app. Your files are never copied.</p>
+        </li>
+        <li class="card step">
+          <h3>Transcribe</h3>
+          <p>On-device speech recognition with per-word timestamps and confidence, split into sentences at pauses. A 6-minute video takes about a second.</p>
+        </li>
+        <li class="card step">
+          <h3>Review</h3>
+          <p>AI flags misheard words and unnatural phrasing, with reasons. Accept, skip or edit each sentence from the keyboard.</p>
+        </li>
+        <li class="card step">
+          <h3>Publish</h3>
+          <p>Export subtitles, a study blog post and a subtitle video — in any order, or just the one you need.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="review" aria-labelledby="review-title" style="padding-top:0">
+    <div class="wrap compare-grid">
+      <div>
+        <div class="kicker">Two subtitle layers</div>
+        <h2 id="review-title">What you said, and how a native speaker would say it — side by side.</h2>
+        <ul class="checks">
+          <li><b>As said</b> only fixes what the machine misheard. Your grammar mistakes stay, so it reflects your real level.</li>
+          <li><b>Natural</b> rewrites awkward phrasing the way a native speaker would, with a category and reason for every change.</li>
+          <li>Explanations are written in your own language, and the depth adapts to your level (CEFR, JLPT, HSK, TOPIK…).</li>
+          <li>Read the improved script from a teleprompter and re-record; subtitles align automatically.</li>
+        </ul>
+      </div>
+      <div class="card review" aria-label="Review example">
+        <div class="row">
+          <span class="label said">As said</span>
+          <p class="jp" lang="ja">昨日は友達と新しいカフェ<del>を</del>行きました。</p>
+        </div>
+        <div class="row">
+          <span class="label nat">Natural</span>
+          <p class="jp" lang="ja">昨日<ins>、</ins>友達と新しいカフェ<ins>に</ins>行きました。</p>
+          <div class="why-note"><span class="chip">Particle</span><span>A destination takes <span lang="ja">に</span> or <span lang="ja">へ</span>; <span lang="ja">を</span> marks a place you pass through or leave.</span></div>
+        </div>
+        <div class="row">
+          <span class="label said">As said</span>
+          <p class="jp" lang="ja">ケーキがすごい<del>おいしいでした</del>。</p>
+        </div>
+        <div class="row">
+          <span class="label nat">Natural</span>
+          <p class="jp" lang="ja">ケーキがすごく<ins>おいしかったです</ins>。</p>
+          <div class="why-note"><span class="chip">Conjugation</span><span>The past of an i-adjective is <span lang="ja">〜かった</span>, not <span lang="ja">〜でした</span>. Use <span lang="ja">すごく</span> to modify an adjective.</span></div>
+          <div class="actions" aria-hidden="true"><span class="key ok">Accept ↩</span><span class="key">Skip ⌫</span><span class="key">Edit E</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="outputs" aria-labelledby="outputs-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head center">
+        <div class="kicker">What you make</div>
+        <h2 id="outputs-title">Speak once, get three things ready to post.</h2>
+        <p>SpeakLog only exports — there's no SpeakLog social network. Where your work goes is up to you.</p>
+      </div>
+      <div class="outputs">
+        <article class="card out">
+          <div class="icon" style="background:rgb(76 141 255 / .14);color:var(--noun)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 15h4M13 15h4M7 11h10"/></svg>
+          </div>
+          <h3>Subtitles</h3>
+          <p>Timed, reviewed subtitles. Keep your original words or use the improved version, and add a translation for bilingual captions.</p>
+          <ul>
+            <li>SRT / VTT / ASS</li>
+            <li>ASS keeps part-of-speech colors and keywords</li>
+            <li>Or burn them straight into the video</li>
+          </ul>
+          <p class="where">CapCut · Aegisub · Final Cut · YouTube</p>
+        </article>
+        <article class="card out">
+          <div class="icon" style="background:rgb(255 122 47 / .14);color:var(--accent)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          </div>
+          <h3>Study blog</h3>
+          <p>A study note: your text first, then "what I said → more natural" pairs, grammar points and a vocabulary list. Templates keep a series consistent.</p>
+          <ul>
+            <li>Markdown / HTML</li>
+            <li>Rich text that pastes into note and Medium</li>
+            <li>Split into a numbered X thread</li>
+          </ul>
+          <p class="where">note · Medium · X · Obsidian · static blogs</p>
+        </article>
+        <article class="card out">
+          <div class="icon" style="background:rgb(47 179 127 / .14);color:var(--verb)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="3"/><path d="M17 10l5-3v10l-5-3"/></svg>
+          </div>
+          <h3>Subtitle video</h3>
+          <p>Karaoke-style word highlighting, part-of-speech colors, readings and translations. Preview and export share one renderer, so what you see is what you get.</p>
+          <ul>
+            <li>Original video, subtitles only, or a different video</li>
+            <li>16:9 · 9:16 · 1:1</li>
+            <li>Trimming, pause tightening, face blurring</li>
+          </ul>
+          <p class="where">YouTube · Instagram · TikTok · Bilibili</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" aria-labelledby="features-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">More features</div>
+        <h2 id="features-title">Details built for speaking and learning.</h2>
+      </div>
+      <div class="features">
+        <div class="feat"><h3>Any practice language</h3><p>English, Japanese, Chinese, Korean, French, Spanish, German… set per project.</p></div>
+        <div class="feat"><h3>Readings per language</h3><p>Furigana for Japanese, pinyin for Chinese, romanization for Korean and Russian — or just part-of-speech colors.</p></div>
+        <div class="feat"><h3>Topic prompts</h3><p>Nothing to say? Draw a topic, or let AI suggest a batch matched to your level.</p></div>
+        <div class="feat"><h3>Live captions while recording</h3><p>Hit record to start; stop and it becomes a project.</p></div>
+        <div class="feat"><h3>AI assistant</h3><p>Tell it in one sentence how to fix subtitles, rewrite the blog or organize notes. Every change can be undone.</p></div>
+        <div class="feat"><h3>Face blurring</h3><p>Detects faces on your Mac and lets you pick who to blur. You, the person filming, stay unblurred by default.</p></div>
+        <div class="feat"><h3>Multi-media projects</h3><p>Import several videos and photos at once; AI writes an overview, rates each clip and analyzes content and visuals.</p></div>
+        <div class="feat"><h3>External agents</h3><p>A built-in MCP server lets Claude Code or Codex read and edit projects and export videos.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap grid">
+      <div class="head" style="margin-bottom:0">
+        <div class="kicker">Privacy, on your Mac</div>
+        <h2 id="privacy-title">Your voice and footage stay on your Mac.</h2>
+        <p>Transcription, video rendering, face blurring and export all run locally. Imported files are referenced in place — never copied or uploaded. AI only suggests; you decide. Every AI call is logged with the model, token count and an estimated cost.</p>
+      </div>
+      <div class="providers" aria-label="AI providers">
+        <div class="prov"><span class="dot" style="background:var(--accent)"></span><div><b>Claude Code CLI</b><span>Uses your signed-in claude; choose Sonnet, Opus or Haiku</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--noun)"></span><div><b>Codex CLI</b><span>Uses your signed-in codex</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--adj)"></span><div><b>Anthropic API</b><span>Your API key is stored in the macOS Keychain</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>On-device model</b><span>Fully offline and free; good enough for translation and annotation</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head center">
+        <div class="kicker">FAQ</div>
+        <h2 id="faq-title">Questions you might have</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Which languages does SpeakLog support?</summary>
+          <p>You choose the language you practice: English, Japanese, Chinese, Korean, French, Spanish, German and more, set per project. Explanations, grammar notes and translations are written in a language you understand.</p>
+        </details>
+        <details>
+          <summary>Are my recordings and videos uploaded?</summary>
+          <p>No. Transcription, video rendering, face blurring and export all happen on your Mac, and imported files are not copied. Only when you turn on AI review is the transcript sent to the AI provider you picked; with the on-device model everything stays offline.</p>
+        </details>
+        <details>
+          <summary>Will the AI overwrite what I actually said?</summary>
+          <p>No. Your original words are saved the moment you record them. AI suggestions live in a separate natural layer, each with a reason, and you decide whether to accept or skip them.</p>
+        </details>
+        <details>
+          <summary>What do I need to run it?</summary>
+          <p>A Mac running macOS 26 or later.</p>
+        </details>
+        <details>
+          <summary>Where can I publish what I make?</summary>
+          <p>Subtitles export as SRT, VTT or ASS for CapCut, Aegisub or Final Cut. Blog posts export as Markdown or HTML, copy as rich text into note or Medium, or split into an X thread. Videos export as MP4 in 16:9, 9:16 or 1:1 for YouTube, Instagram, TikTok and more.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="download" aria-labelledby="download-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="card">
+        <img src="/assets/icon-192.png" alt="SpeakLog app icon" width="96" height="96" loading="lazy">
+        <h2 id="download-title">Say something today.</h2>
+        <p>It doesn't have to be good — speak first, polish it later.</p>
+        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="download_click" data-track-location="cta">Download for Mac</a>
+        <p class="sys">Requires macOS 26 or later · Notarized by Apple · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="download_click" data-track-location="releases">DMG and previous versions</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SpeakLog</span>
+    <nav aria-label="Footer">
+      <a href="#features">Features</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://x.com/itsuki_maer" rel="me noopener" target="_blank">X</a>
+      <a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/site.js?v=3" defer></script>
+</body>
+</html>

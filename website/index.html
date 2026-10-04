@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  上线前替换两个占位符（见 website/README.md）：
+    https://speak.erzhiqian.cc  → 正式域名
+    G-XXXXXXXXXX              → Google Analytics 4 衡量 ID
+-->
+
+<title>SpeakLog — 把你说的外语，变成字幕、博客和视频 | Mac 外语口语练习应用</title>
+<meta name="description" content="SpeakLog 是给外语学习者的 Mac 应用：先开口说，再一句一句改好。本机转录你的录音或视频，对照「我说的」和「更自然的说法」，导出字幕、学习博客和逐词高亮的字幕视频。支持英语、日语、中文、韩语等。">
+<meta name="keywords" content="外语口语练习,口语输出,日语学习,英语口语,Mac 应用,字幕生成,自动字幕,学习博客,Vlog 字幕,逐词高亮字幕,假名注音,AI 纠错,SpeakLog">
+<link rel="canonical" href="https://speak.erzhiqian.cc/">
+<link rel="alternate" hreflang="zh-CN" href="https://speak.erzhiqian.cc/">
+<link rel="alternate" hreflang="en" href="https://speak.erzhiqian.cc/en/">
+<link rel="alternate" hreflang="ja" href="https://speak.erzhiqian.cc/ja/">
+<link rel="alternate" hreflang="x-default" href="https://speak.erzhiqian.cc/en/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#1B1838">
+<meta name="color-scheme" content="light dark">
+
+<!-- Open Graph / 社交分享 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpeakLog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:locale:alternate" content="ja_JP">
+<meta property="og:url" content="https://speak.erzhiqian.cc/">
+<meta property="og:title" content="SpeakLog — 先说出来，再慢慢改好">
+<meta property="og:description" content="把你自己说的外语，变成字幕、学习博客和逐词高亮的字幕视频。Mac 应用，转录和渲染都在本机完成。">
+<meta property="og:image" content="https://speak.erzhiqian.cc/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpeakLog：先说出来，再慢慢改好">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpeakLog — 先说出来，再慢慢改好">
+<meta name="twitter:description" content="把你自己说的外语，变成字幕、学习博客和逐词高亮的字幕视频。">
+<meta name="twitter:image" content="https://speak.erzhiqian.cc/assets/og.png">
+
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/icon-32.png">
+<link rel="apple-touch-icon" href="/assets/icon-180.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://speak.erzhiqian.cc/#website",
+      "url": "https://speak.erzhiqian.cc/",
+      "name": "SpeakLog",
+      "inLanguage": "zh-CN"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://speak.erzhiqian.cc/#app",
+      "name": "SpeakLog",
+      "alternateName": "スピークログ",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "macOS 26 或更高版本",
+      "description": "给外语学习者的 Mac 应用：导入或录下你用外语说的话，本机转录，对照原话和更自然的说法，导出字幕、学习博客和逐词高亮的字幕视频。",
+      "url": "https://speak.erzhiqian.cc/",
+      "image": "https://speak.erzhiqian.cc/assets/icon-512.png",
+      "softwareVersion": "0.1.1",
+      "downloadUrl": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg",
+      "screenshot": "https://speak.erzhiqian.cc/assets/og.png",
+      "inLanguage": "zh-CN",
+      "featureList": [
+        "本机离线转录，带逐词时间戳",
+        "原话与自然说法两层字幕",
+        "导出 SRT / VTT / ASS 字幕",
+        "生成学习博客并导出到 note、Medium、X",
+        "逐词高亮、按词性上色、带注音的字幕视频",
+        "路人自动打码",
+        "AI 助手与外部 Agent（MCP）"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "SpeakLog 支持哪些语言？",
+          "acceptedAnswer": { "@type": "Answer", "text": "练习语言可以自己设置，英语、日语、中文、韩语、法语、西班牙语、德语等都可以，每个作品还能单独设置。修改原因、语法说明和翻译用你看得懂的语言来写。" }
+        },
+        {
+          "@type": "Question",
+          "name": "我的录音和视频会被上传吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不会。转录、视频渲染、路人打码和导出都在你的 Mac 上完成，导入的文件也不会被复制。只有你启用 AI 校对时，文字稿会发给你选择的 AI 提供方；选端侧模型则完全离线。" }
+        },
+        {
+          "@type": "Question",
+          "name": "AI 会改掉我原来说的话吗？",
+          "acceptedAnswer": { "@type": "Answer", "text": "不会。原话从录下的那一刻起就固定保存，AI 的修改只放在旁边的「自然说法」一层，每一处都附上原因，由你决定采纳还是忽略。" }
+        },
+        {
+          "@type": "Question",
+          "name": "需要什么样的电脑？",
+          "acceptedAnswer": { "@type": "Answer", "text": "需要运行 macOS 26 或更高版本的 Mac。" }
+        },
+        {
+          "@type": "Question",
+          "name": "可以导出到哪些平台？",
+          "acceptedAnswer": { "@type": "Answer", "text": "字幕导出 SRT、VTT、ASS，可以继续在剪映、Aegisub、Final Cut 里用；博客导出 Markdown、HTML，或复制排好版的富文本到 note、Medium，也能拆成 X 串推；视频导出 MP4，支持 16:9、9:16 和 1:1，适合 YouTube、Bilibili、Instagram、抖音。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Google Analytics 4：ID 在 /assets/analytics.js 里 -->
+<script src="/assets/analytics.js?v=3"></script>
+
+<link rel="stylesheet" href="/assets/site.css?v=3">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="SpeakLog 首页">
+      <img src="/assets/icon-192.png" alt="" width="30" height="30">
+      SpeakLog
+    </a>
+    <nav aria-label="主导航">
+      <a href="#how">怎么用</a>
+      <a href="#outputs">三种产出</a>
+      <a href="#features">功能</a>
+      <a href="#faq">常见问题</a>
+      <span class="lang" role="group" aria-label="语言 / Language">
+        <a href="/" hreflang="zh-CN" lang="zh-CN" aria-current="true">中文</a>
+        <a href="/en/" hreflang="en" lang="en" data-track="language_switch" data-track-location="en">EN</a>
+        <a href="/ja/" hreflang="ja" lang="ja" data-track="language_switch" data-track-location="ja">日本語</a>
+      </span>
+      <a class="btn btn-primary btn-sm" href="#download" data-track="cta_click" data-track-location="header">获取 Mac 版</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">给外语学习者的 Mac 应用</span>
+        <h1 id="hero-title">先说出来，<br><em>再慢慢改好。</em></h1>
+        <p class="lede">把你自己说的外语，变成字幕、学习博客和逐词高亮的字幕视频。哪怕说得磕磕绊绊，SpeakLog 也会帮你转成文字，对照「我说的」和「更自然的说法」，一句一句改好。</p>
+        <div class="ctas">
+          <a class="btn btn-primary" href="#download" data-track="cta_click" data-track-location="hero">获取 Mac 版</a>
+          <a class="btn btn-ghost" href="#how" data-track="cta_click" data-track-location="hero_secondary">看看怎么用</a>
+        </div>
+        <p class="note">转录、渲染、导出都在本机完成 · 支持英语、日语、中文、韩语等</p>
+      </div>
+
+      <figure class="demo" aria-label="逐词高亮字幕示例">
+        <div class="demo-screen">
+          <span class="demo-tag">视频制作 · 预览</span>
+          <div class="sub">
+            <div class="sub-line" lang="ja" id="karaoke">
+              <span class="w n"><ruby>昨日<rt>きのう</rt></ruby></span><span class="w p">、</span><span class="w n"><ruby>友達<rt>ともだち</rt></ruby></span><span class="w p">と</span><span class="w a"><ruby>新<rt>あたら</rt></ruby>しい</span><span class="w n">カフェ</span><span class="w p">に</span><span class="w v"><ruby>行<rt>い</rt></ruby>きました</span>
+            </div>
+            <p class="sub-tr">昨天和朋友去了一家新开的咖啡馆。</p>
+          </div>
+        </div>
+        <div class="demo-bar" aria-hidden="true"><span id="tc">0:00</span><div class="track"><div class="fill" id="fill"></div></div><span>0:04</span></div>
+        <figcaption class="legend">
+          <span><i style="background:#8DB6FF"></i>名词</span>
+          <span><i style="background:#6EE0AE"></i>动词</span>
+          <span><i style="background:#FF94C6"></i>形容词</span>
+          <span><i style="background:#CFC9E6"></i>助词</span>
+          <span><i style="background:var(--glow)"></i>正在读</span>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">为什么做 SpeakLog</div>
+        <h2 id="why-title">学外语最缺的，是开口说。</h2>
+        <p>很多人想先准备好、说对了再开口，结果一直没说。说了的人，说完也就没了：不知道哪里说错，也没留下什么。</p>
+      </div>
+      <div class="why">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>先说，不打草稿</h3>
+          <p>随手录一段，或者导入已经拍好的 Vlog、口播视频。不用写稿，不用等「准备好」，想到什么就说什么。</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>原话永远保留</h3>
+          <p>你真实说出来的那一版一直都在，AI 的修改只是加在旁边的另一层。几个月后回头看，能清楚看到自己的进步。</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>改好了，就能发</h3>
+          <p>原话加上改好的版本，本身就是一篇真实的学习记录，直接导出成字幕、博客和视频，发到你常用的平台。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" aria-labelledby="how-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">怎么用</div>
+        <h2 id="how-title">四步，从一段录音到一份作品。</h2>
+      </div>
+      <ol class="steps" style="list-style:none;padding:0;margin:0">
+        <li class="card step">
+          <h3>说</h3>
+          <p>把手机录音、Vlog、口播视频拖进窗口，或者直接在应用里按下录音。文件不会被复制。</p>
+        </li>
+        <li class="card step">
+          <h3>转录</h3>
+          <p>本机语音识别，带到每个词的时间戳和置信度，按停顿自动切句。6 分钟的视频约 1 秒完成。</p>
+        </li>
+        <li class="card step">
+          <h3>校对</h3>
+          <p>AI 找出听错的地方和不自然的表达，并说明原因。你用键盘逐句采纳、忽略或手动修改。</p>
+        </li>
+        <li class="card step">
+          <h3>发布</h3>
+          <p>导出字幕、学习博客和字幕视频。三种产出可以按任意顺序做，也可以只做其中一种。</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="review" aria-labelledby="review-title" style="padding-top:0">
+    <div class="wrap compare-grid">
+      <div>
+        <div class="kicker">两层字幕</div>
+        <h2 id="review-title">「我说的」和「更自然的说法」，并排放着。</h2>
+        <ul class="checks">
+          <li><b>原话</b>只修正机器听错的地方，你说错的语法保留原样，看得出真实水平。</li>
+          <li><b>自然说法</b>把不地道的表达改成母语者会说的样子，每处修改都附上分类和原因。</li>
+          <li>解释用你的母语写，改写的幅度按你的水平（CEFR、JLPT、HSK、TOPIK…）调整。</li>
+          <li>改完可以照着提词器再读一遍，重新录音自动对齐字幕。</li>
+        </ul>
+      </div>
+      <div class="card review" aria-label="校对示例">
+        <div class="row">
+          <span class="label said">我说的</span>
+          <p class="jp" lang="ja">昨日は友達と新しいカフェ<del>を</del>行きました。</p>
+        </div>
+        <div class="row">
+          <span class="label nat">更自然的说法</span>
+          <p class="jp" lang="ja">昨日<ins>、</ins>友達と新しいカフェ<ins>に</ins>行きました。</p>
+          <div class="why-note"><span class="chip">助词</span><span>表示去的地方要用「に」或「へ」，「を」用在穿过、离开的场所。</span></div>
+        </div>
+        <div class="row">
+          <span class="label said">我说的</span>
+          <p class="jp" lang="ja">ケーキがすごい<del>おいしいでした</del>。</p>
+        </div>
+        <div class="row">
+          <span class="label nat">更自然的说法</span>
+          <p class="jp" lang="ja">ケーキがすごく<ins>おいしかったです</ins>。</p>
+          <div class="why-note"><span class="chip">活用</span><span>い形容词的过去式是「〜かった」，不能直接接「でした」；修饰形容词时用「すごく」。</span></div>
+          <div class="actions" aria-hidden="true"><span class="key ok">采纳 ↩</span><span class="key">忽略 ⌫</span><span class="key">修改 E</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="outputs" aria-labelledby="outputs-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head center">
+        <div class="kicker">三种产出</div>
+        <h2 id="outputs-title">一次开口，三样可以直接发的东西。</h2>
+        <p>目前只做导出，不自建分享平台。你的内容发到哪里，由你决定。</p>
+      </div>
+      <div class="outputs">
+        <article class="card out">
+          <div class="icon" style="background:rgb(76 141 255 / .14);color:var(--noun)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M7 15h4M13 15h4M7 11h10"/></svg>
+          </div>
+          <h3>字幕</h3>
+          <p>按时间轴排好、校对过的字幕。可以保留原话，也可以用改好的版本，还能加上母语翻译做成双语。</p>
+          <ul>
+            <li>SRT / VTT / ASS</li>
+            <li>ASS 保留词性颜色和关键词</li>
+            <li>也可以直接烧进视频</li>
+          </ul>
+          <p class="where">剪映 · Aegisub · Final Cut · YouTube</p>
+        </article>
+        <article class="card out">
+          <div class="icon" style="background:rgb(255 122 47 / .14);color:var(--accent)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg>
+          </div>
+          <h3>学习博客</h3>
+          <p>一篇学习笔记：先是正文，再是「我说的 → 更自然的说法」对照、语法点和生词表。可以设置固定栏目和系列编号。</p>
+          <ul>
+            <li>Markdown / HTML</li>
+            <li>富文本一键复制到 note、Medium</li>
+            <li>按字数拆成 X 串推</li>
+          </ul>
+          <p class="where">note · Medium · X · Obsidian · 静态博客</p>
+        </article>
+        <article class="card out">
+          <div class="icon" style="background:rgb(47 179 127 / .14);color:var(--verb)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="15" height="14" rx="3"/><path d="M17 10l5-3v10l-5-3"/></svg>
+          </div>
+          <h3>字幕视频</h3>
+          <p>卡拉 OK 式逐词高亮、按词性上色、带注音和翻译的字幕视频。预览和导出用同一套渲染，看到什么就导出什么。</p>
+          <ul>
+            <li>原视频、纯字幕、换一段画面三种模式</li>
+            <li>16:9 · 9:16 · 1:1 画幅</li>
+            <li>剪辑、压缩停顿、路人打码</li>
+          </ul>
+          <p class="where">YouTube · Bilibili · Instagram · 抖音</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" aria-labelledby="features-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <div class="kicker">更多功能</div>
+        <h2 id="features-title">为「说」和「学」准备的细节。</h2>
+      </div>
+      <div class="features">
+        <div class="feat"><h3>任何练习语言</h3><p>英语、日语、中文、韩语、法语、西班牙语、德语……每个作品可以单独设置。</p></div>
+        <div class="feat"><h3>按语言标注</h3><p>日语标假名，中文标拼音，韩语、俄语标罗马字；英语、法语可以只按词性上色。</p></div>
+        <div class="feat"><h3>抽题开口</h3><p>不知道说什么？抽一个话题，或者让 AI 按你的水平出一批。</p></div>
+        <div class="feat"><h3>边录边出字幕</h3><p>应用内录音，按下就开始，停下来自动变成一个作品。</p></div>
+        <div class="feat"><h3>AI 助手</h3><p>用一句话告诉它怎么改字幕、重写博客或整理笔记。每次修改都能整条撤销。</p></div>
+        <div class="feat"><h3>路人打码</h3><p>在本机识别画面里的人脸，按人选择要不要打码，拍摄者默认不打。</p></div>
+        <div class="feat"><h3>多素材项目</h3><p>一次导入多个视频和照片，AI 写总体介绍、给素材打星，并分析内容和画面。</p></div>
+        <div class="feat"><h3>外部 Agent</h3><p>内置 MCP 接口，可以让 Claude Code 或 Codex 直接读写作品、导出视频。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="privacy" aria-labelledby="privacy-title">
+    <div class="wrap grid">
+      <div class="head" style="margin-bottom:0">
+        <div class="kicker">隐私与本机处理</div>
+        <h2 id="privacy-title">你的声音和画面，留在你的 Mac 上。</h2>
+        <p>转录、视频渲染、路人打码和导出全部在本机完成。导入的文件只记住位置，不复制、不上传。AI 只给建议，改不改由你决定；每一次 AI 调用都有记录，用了什么模型、多少 token、大概多少钱，一目了然。</p>
+      </div>
+      <div class="providers" aria-label="AI 提供方">
+        <div class="prov"><span class="dot" style="background:var(--accent)"></span><div><b>Claude Code 命令行</b><span>用你已经登录的 claude，可选 Sonnet / Opus / Haiku</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--noun)"></span><div><b>Codex CLI</b><span>用你已经登录的 codex</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--adj)"></span><div><b>Anthropic API</b><span>API key 存在系统钥匙串里</span></div></div>
+        <div class="prov"><span class="dot" style="background:var(--verb)"></span><div><b>端侧模型</b><span>完全离线、免费；翻译和标注够用</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <div class="head center">
+        <div class="kicker">常见问题</div>
+        <h2 id="faq-title">你可能想知道的</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>SpeakLog 支持哪些语言？</summary>
+          <p>练习语言可以自己设置，英语、日语、中文、韩语、法语、西班牙语、德语等都可以，每个作品还能单独设置。修改原因、语法说明和翻译用你看得懂的语言来写。</p>
+        </details>
+        <details>
+          <summary>我的录音和视频会被上传吗？</summary>
+          <p>不会。转录、视频渲染、路人打码和导出都在你的 Mac 上完成，导入的文件也不会被复制。只有你启用 AI 校对时，文字稿会发给你选择的 AI 提供方；选端侧模型则完全离线。</p>
+        </details>
+        <details>
+          <summary>AI 会改掉我原来说的话吗？</summary>
+          <p>不会。原话从录下的那一刻起就固定保存，AI 的修改只放在旁边的「自然说法」一层，每一处都附上原因，由你决定采纳还是忽略。</p>
+        </details>
+        <details>
+          <summary>需要什么样的电脑？</summary>
+          <p>需要运行 macOS 26 或更高版本的 Mac。</p>
+        </details>
+        <details>
+          <summary>可以导出到哪些平台？</summary>
+          <p>字幕导出 SRT、VTT、ASS，可以继续在剪映、Aegisub、Final Cut 里用；博客导出 Markdown、HTML，或复制排好版的富文本到 note、Medium，也能拆成 X 串推；视频导出 MP4，支持 16:9、9:16 和 1:1，适合 YouTube、Bilibili、Instagram、抖音。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta" id="download" aria-labelledby="download-title" style="padding-top:0">
+    <div class="wrap">
+      <div class="card">
+        <img src="/assets/icon-192.png" alt="SpeakLog 应用图标" width="96" height="96" loading="lazy">
+        <h2 id="download-title">今天就说一段吧。</h2>
+        <p>说得不好也没关系，先说出来，再慢慢改好。</p>
+        <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="download_click" data-track-location="cta">下载 Mac 版</a>
+        <p class="sys">需要 macOS 26 或更高版本 · 已经过 Apple 公证 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="download_click" data-track-location="releases">DMG 和历史版本</a></p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 SpeakLog · 读作 スピークログ</span>
+    <nav aria-label="页脚">
+      <a href="#features">功能</a>
+      <a href="#privacy">隐私</a>
+      <a href="#faq">常见问题</a>
+      <a href="https://x.com/itsuki_maer" rel="me noopener" target="_blank">X</a>
+      <a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="/assets/site.js?v=3" defer></script>
+</body>
+</html>
