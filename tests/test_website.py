@@ -26,6 +26,10 @@ class ContentTests(unittest.TestCase):
         self.assertEqual(normalize_cloudflare_email(rewritten), original)
         self.assertEqual(normalize_cloudflare_email(original), original)
         self.assertNotEqual(normalize_cloudflare_email(rewritten + b'changed'), original)
+        plain = b'<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="' + encoded + b'">[email&#160;protected]</a>'
+        self.assertEqual(normalize_cloudflare_email(plain), b'a@b.cc')
+        beacon = b'<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v123" integrity="sha512-test" data-cf-beacon=\'{}\' crossorigin="anonymous"></script>\n'
+        self.assertEqual(normalize_cloudflare_email(original + beacon), original)
 
     def test_public_content_contract(self):
         self.assertEqual(validate(ROOT / "website"), [])

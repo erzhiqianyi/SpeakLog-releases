@@ -110,7 +110,7 @@ python3 scripts/smoke_website.py --base-url https://<deployment>.speaklog.pages.
 python3 scripts/smoke_website.py --base-url https://speak.erzhiqian.cc
 ```
 
-smoke 脚本只发送 GET 请求，不执行网页 JS、不上传文件。它将公开文件与当前 checkout 逐字节比较、检查主要 Content-Type，并确认根路径及英语/日语 guides 下随机不存在的路径确实返回 HTTP 404。字节不符可表示部署版本错误或缓存未更新；先确认所查 URL 与 commit 再处理。检查默认每个请求超时 15 秒，可用 `--timeout 30` 调整。必须显式指定目标地址，生产检查不会被默认运行。
+smoke 脚本只发送 GET 请求，不执行网页 JS、不上传文件。它先还原 Cloudflare 邮箱保护的改写并排除 Cloudflare 自动注入的 Web Analytics beacon，再将公开文件与当前 checkout 逐字节比较、检查主要 Content-Type，并确认根路径及英语/日语 guides 下随机不存在的路径确实返回 HTTP 404。字节不符可表示部署版本错误或缓存未更新；先确认所查 URL 与 commit 再处理。检查默认每个请求超时 15 秒，可用 `--timeout 30` 调整。必须显式指定目标地址，生产检查不会被默认运行。
 
 ## 分析事件
 

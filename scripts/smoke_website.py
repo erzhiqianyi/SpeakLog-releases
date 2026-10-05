@@ -21,7 +21,11 @@ def normalize_cloudflare_email(body):
                   lambda match: b'href="mailto:' + decode(match[1]) + b'"', body)
     body = re.sub(rb'<span class="__cf_email__" data-cfemail="([0-9a-fA-F]+)">\[email&#160;protected\]</span>',
                   lambda match: decode(match[1]), body)
-    return re.sub(rb'<script data-cfasync="false" src="/cdn-cgi/scripts/[0-9a-f]+/cloudflare-static/email-decode.min.js"></script>', b'', body)
+    body = re.sub(rb'<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="([0-9a-fA-F]+)">\[email&#160;protected\]</a>',
+                  lambda match: decode(match[1]), body)
+    body = re.sub(rb'<script data-cfasync="false" src="/cdn-cgi/scripts/[0-9a-f]+/cloudflare-static/email-decode.min.js"></script>', b'', body)
+    # Cloudflare Web Analytics injects this external beacon on some edge responses.
+    return re.sub(rb'<script type="module" src="https://static\.cloudflareinsights\.com/beacon\.min\.js/[a-zA-Z0-9]+" integrity="[^"]+" data-cf-beacon=\'[^\']+\' crossorigin="anonymous"></script>\n?', b'', body)
 
 sys.dont_write_bytecode = True
 from validate_website import is_public_file, validate
