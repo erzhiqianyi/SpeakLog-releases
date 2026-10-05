@@ -75,6 +75,14 @@ python3 -m http.server 8765 --directory "$OUT"
 
 Python HTTP 服务器足够本地预览，但不模拟 Cloudflare 自定义 404 文案、重定向或响应头配置。
 
+## 自动生产部署
+
+`.github/workflows/deploy-pages.yml` 在 `main` 的 `website/`、`scripts/`、`tests/` 或部署工作流变更时自动发布，也支持在 GitHub Actions 中手动运行（仅允许 `main`）。
+
+仓库 Actions Secrets 必须配置 `CLOUDFLARE_API_TOKEN`（目标账户的 Cloudflare Pages Edit 权限）和 `CLOUDFLARE_ACCOUNT_ID`。不要放在 Actions Variables 中。
+
+工作流执行 `website/deploy.sh --production`：先通过全部验证和测试，再发布到现有 `speaklog` Pages 项目，最后对 `https://speak.erzhiqian.cc` 执行逐文件 smoke 检查。生产部署串行执行；原有 Website validation 工作流仍只做离线验证。
+
 ## 手动生产部署
 
 只有显式传入 `--production` 才会上传。生产部署要求：
