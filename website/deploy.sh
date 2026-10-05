@@ -38,7 +38,10 @@ COMMIT=$(git -C "$ROOT" rev-parse --verify HEAD)
 cd "$ROOT"
 # CI=1 prevents an unattended login flow; use an existing authorized login/token.
 export CI=1 WRANGLER_SEND_METRICS=false
-npm exec --yes --package="wrangler@$WRANGLER_VERSION" -- wrangler whoami
+# Pages-scoped CI tokens need not have permission to enumerate user accounts.
+if [[ -z "${CLOUDFLARE_API_TOKEN:-}" || -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]]; then
+  npm exec --yes --package="wrangler@$WRANGLER_VERSION" -- wrangler whoami
+fi
 npm exec --yes --package="wrangler@$WRANGLER_VERSION" -- wrangler pages deploy "$OUT" \
   --project-name speaklog --branch main --commit-hash "$COMMIT" --commit-dirty=false
 # Verification is read-only and deliberately separate from publication.

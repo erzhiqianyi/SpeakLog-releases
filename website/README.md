@@ -99,7 +99,7 @@ Wrangler 固定为 `4.147.0`，版本记录在 `scripts/wrangler-version.txt`，
 website/deploy.sh --production
 ```
 
-脚本先执行只读 `wrangler whoami` 检查已有登录，再上传允许列表构建，并记录当前 Git commit。它不会自动登录、提交、推送、部署预览或更改 Cloudflare 设置。不要将 `--production` 加入验证 CI。若 Git 集成在 Cloudflare 控制台另有自动部署设置，本仓库不会替你改变它；发布前需自行确认。
+脚本在提供 Token 和 Account ID 时直接使用 Pages 接口认证；本地登录模式先执行只读 `wrangler whoami`。随后上传允许列表构建，并记录当前 Git commit。它不会自动登录、提交、推送、部署预览或更改 Cloudflare 设置。不要将 `--production` 加入验证 CI。若 Git 集成在 Cloudflare 控制台另有自动部署设置，本仓库不会替你改变它；发布前需自行确认。
 
 ## 部署后只读检查
 
