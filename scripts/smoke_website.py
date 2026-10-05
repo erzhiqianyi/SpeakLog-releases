@@ -1,12 +1,26 @@
 #!/usr/bin/env python3
 """Read-only post-deploy check: compare public bytes and require a real HTTP 404."""
 import argparse
+import re
 from pathlib import Path
 import sys
 from urllib.error import HTTPError, URLError
 from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 import uuid
+
+
+def normalize_cloudflare_email(body):
+    """Undo only Cloudflare's email obfuscation for content comparison."""
+    def decode(value):
+        data = bytes.fromhex(value.decode('ascii'))
+        return bytes(byte ^ data[0] for byte in data[1:])
+
+    body = re.sub(rb'href="/cdn-cgi/l/email-protection#([0-9a-fA-F]+)"',
+                  lambda match: b'href="mailto:' + decode(match[1]) + b'"', body)
+    body = re.sub(rb'<span class="__cf_email__" data-cfemail="([0-9a-fA-F]+)">\[email&#160;protected\]</span>',
+                  lambda match: decode(match[1]), body)
+    return re.sub(rb'<script data-cfasync="false" src="/cdn-cgi/scripts/[0-9a-f]+/cloudflare-static/email-decode.min.js"></script>', b'', body)
 
 sys.dont_write_bytecode = True
 from validate_website import is_public_file, validate
@@ -44,7 +58,8 @@ def smoke(base_url, site_dir, timeout=15):
             status, headers, body = fetch(base_url + route, timeout)
             if status not in ({200, 404} if route == "/404.html" else {200}):
                 errors.append(f"{route}: expected HTTP 200, got {status}")
-            if body != path.read_bytes():
+            compared_body = normalize_cloudflare_email(body) if path.suffix == '.html' else body
+            if compared_body != path.read_bytes():
                 errors.append(f"{route}: deployed bytes differ from this checkout (wrong release or stale cache)")
             expected_type = {".html": "text/html", ".css": "text/css", ".js": "javascript", ".png": "image/png"}.get(path.suffix)
             if expected_type and expected_type not in headers.get("Content-Type", ""):

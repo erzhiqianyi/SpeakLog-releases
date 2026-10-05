@@ -12,11 +12,21 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.dont_write_bytecode = True
 sys.path.insert(0, str(ROOT / "scripts"))
 from build_website import build
-from smoke_website import smoke
+from smoke_website import smoke, normalize_cloudflare_email
 from validate_website import Document, PUBLIC_ROUTES, equivalents, is_public_file, normalize, validate
 
 
 class ContentTests(unittest.TestCase):
+    def test_cloudflare_email_rewrite_preserves_content_comparison(self):
+        original = b'<a href="mailto:a@b.cc">a@b.cc</a>'
+        encoded = bytes([42] + [byte ^ 42 for byte in b'a@b.cc']).hex().encode()
+        rewritten = (b'<a href="/cdn-cgi/l/email-protection#' + encoded + b'">'
+                     b'<span class="__cf_email__" data-cfemail="' + encoded + b'">[email&#160;protected]</span></a>'
+                     b'<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>')
+        self.assertEqual(normalize_cloudflare_email(rewritten), original)
+        self.assertEqual(normalize_cloudflare_email(original), original)
+        self.assertNotEqual(normalize_cloudflare_email(rewritten + b'changed'), original)
+
     def test_public_content_contract(self):
         self.assertEqual(validate(ROOT / "website"), [])
 
