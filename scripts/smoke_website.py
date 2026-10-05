@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Read-only post-deploy check: compare public bytes and require a real HTTP 404."""
 import argparse
+import difflib
 import re
 from pathlib import Path
 import sys
@@ -61,6 +62,9 @@ def smoke(base_url, site_dir, timeout=15):
             compared_body = normalize_cloudflare_email(body) if path.suffix == '.html' else body
             if compared_body != path.read_bytes():
                 errors.append(f"{route}: deployed bytes differ from this checkout (wrong release or stale cache)")
+                if path.suffix == '.html':
+                    diff = difflib.unified_diff(path.read_text().splitlines(), compared_body.decode('utf-8', errors='replace').splitlines(), n=1)
+                    errors.extend(list(diff)[:16])
             expected_type = {".html": "text/html", ".css": "text/css", ".js": "javascript", ".png": "image/png"}.get(path.suffix)
             if expected_type and expected_type not in headers.get("Content-Type", ""):
                 errors.append(f"{route}: unexpected Content-Type {headers.get('Content-Type')}")
