@@ -41,7 +41,7 @@
       "headline": "SpeakLog 隐私与数据流：本机处理和云端 AI",
       "description": "了解 SpeakLog 哪些步骤在 Mac 本机运行，哪些 AI 功能会发送文字或抽取的画面，以及项目记录、外部 Agent 和网站统计的边界。",
       "inLanguage": "zh-CN",
-      "dateModified": "2026-10-04",
+      "dateModified": "2026-10-14",
       "publisher": {
         "@type": "Organization",
         "name": "SpeakLog",
@@ -79,13 +79,14 @@
 <main id="main" class="guide wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">首页</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog 隐私与数据流：本机处理和云端 AI</span></nav>
 <article>
-<header class="guide-head"><p class="kicker">使用指南</p><h1>SpeakLog 隐私与数据流：本机处理和云端 AI</h1><p class="guide-intro">本机转录不等于所有功能都离线。SpeakLog 的转录、视频渲染和人脸打码在 Mac 上运行；使用云端 AI、画面分析或外部 Agent 时，相关内容可能交给对应的提供方。</p><p class="guide-meta">适用于 SpeakLog <span data-version="0.1.1">0.1.1</span> · 内容核对：2026-10-04 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1" data-track="release_page_click" data-track-location="guide_version">0.1.1 发布说明</a></p></header>
-<nav class="guide-toc card" aria-label="本页内容"><ol><li><a href="#section-1">哪些工作在本机进行</a></li><li><a href="#section-2">哪些内容可能交给 AI 提供方</a></li><li><a href="#section-3">项目、日志和外部 Agent</a></li><li><a href="#section-4">费用和控制边界</a></li><li><a href="#section-5">这个网站的统计</a></li></ol></nav>
+<header class="guide-head"><p class="kicker">使用指南</p><h1>SpeakLog 隐私与数据流：本机处理和云端 AI</h1><p class="guide-intro">本机转录不等于所有功能都离线。SpeakLog 的转录、视频渲染和人脸打码在 Mac 上运行；使用云端 AI、画面分析或外部 Agent 时，相关内容可能交给对应的提供方。</p><p class="guide-meta">适用于 SpeakLog <span data-version="0.1.1">0.1.1</span> · 内容核对：2026-10-14 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.1.1" data-track="release_page_click" data-track-location="guide_version">0.1.1 发布说明</a></p></header>
+<nav class="guide-toc card" aria-label="本页内容"><ol><li><a href="#section-1">哪些工作在本机进行</a></li><li><a href="#section-2">哪些内容可能交给 AI 提供方</a></li><li><a href="#section-3">项目、日志和外部 Agent</a></li><li><a href="#section-4">费用和控制边界</a></li><li><a href="#section-5">这个网站的统计</a></li><li><a href="#youtube">YouTube 连接与发布</a></li></ol></nav>
 <section id="section-1"><h2>哪些工作在本机进行</h2><p>语音转录、视频渲染、人脸检测与打码、文件导出使用 Mac 上的处理流程。首次使用某种语音语言可能需要下载系统模型。</p><p>导入的原媒体通常引用原文件位置，不因为导入而整份上传。应用内录音、项目数据、导出结果和抽取的分析帧会写入本地文件。</p></section>
 <section id="section-2"><h2>哪些内容可能交给 AI 提供方</h2><p>校对、翻译、标注、博客、内容分析、题目生成和助手对话会按功能发送相应的文字与上下文。云端提供方包括 Claude Code、Codex CLI 和 Anthropic API；CLI 登录不等于离线处理。</p><p>画面分析会从视频中抽取画面，或读取照片，并交给支持图片的 CLI 处理。全局选择 Anthropic API 或端侧模型时，画面分析仍会走 Codex CLI。抽帧不是只发送文字，也不代表上传整段原视频。</p><p>端侧模型只让它实际承担的文字任务在本机运行。不要把该设置理解为禁止全部外部调用。导入流程可自动校对；处理敏感内容前请关闭不需要的自动任务并检查设置。</p></section>
 <section id="section-3"><h2>项目、日志和外部 Agent</h2><p>项目默认保存在本机的 Movies/SpeakLog 资料库。AI 用量记录可以包含提示词、原始输出、模型、token 和费用估算，因此项目包和日志本身也可能包含私人内容。</p><p>MCP 连接在本机与应用通信，但外部 Agent 可以读取和修改项目，相关上下文也可能进入 Agent 的提供方。只连接你信任的客户端，并检查其数据处理设置。</p><p>Anthropic API 密钥由应用存入 macOS 钥匙串。不要把密钥、项目日志或私人媒体贴进公开问题报告。</p></section>
 <section id="section-4"><h2>费用和控制边界</h2><p>端侧模型的文字任务不产生云端 API 调用费用。云端订阅、API 账单、额度及数据保留规则取决于你选用的提供方。应用显示的费用是估算值，不是提供方的最终账单。</p><p>这里说明 0.1.1 的功能与数据路径，不承诺第三方如何保留数据，也不宣布应用的未来价格。使用前请查看对应服务的条款与隐私设置。</p></section>
 <section id="section-5"><h2>这个网站的统计</h2><p>产品网站使用 Google Analytics 4 统计浏览和交互，包括页面语言、下载按钮、发布页链接、语言切换与常见问题展开。下载按钮点击只表示点击，不代表安装完成。</p><p>网站会加载 Google 的统计脚本；浏览器或内容拦截器可能阻止它。此网站统计与 Mac 应用处理的录音和项目内容是不同的数据流。隐私问题可联系 speaklog@erzhiqian.cc。</p></section>
+<section id="youtube"><h2>YouTube 连接与发布</h2><p>具有 YouTube 发布功能的 SpeakLog 版本使用 Google OAuth 连接你选择的频道。应用读取频道编号和名称，用于显示发布目标；访问令牌和刷新令牌用于你授权的视频、封面和字幕上传，保存在 Mac 的钥匙串中。</p><p>只有你确认发布后，所选成片、标题、介绍、公开范围及可选封面和字幕才会从 Mac 直接发送至 YouTube。SpeakLog 不通过自建服务器转存视频。上传地址、上传进度和视频编号等恢复与发布记录会保存在本地作品包中。应用可以在你发起的发布任务进行期间于后台续传。</p><p>SpeakLog 只使用 Google / YouTube API 数据提供你请求的频道连接与发布功能，不出售这些数据，不用于广告，也不用于训练 AI 模型；频道授权信息不会发送给 AI 提供方。SpeakLog 对从 Google API 获取的信息的使用和转移遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服务用户数据政策</a>，包括 Limited Use 要求。</p><p>你可以在 SpeakLog 中断开连接，移除本机保存的频道授权；也可以在 <a href="https://myaccount.google.com/connections">Google 账号连接管理</a>中撤销 SpeakLog 的访问权限。删除本地作品可移除该作品的本地上传和发布记录。断开连接或删除本地作品不会删除已经上传到 YouTube 的视频，远程视频和字幕需在 YouTube Studio 管理。</p><p>使用 YouTube 发布功能也受 <a href="https://www.youtube.com/t/terms">YouTube 服务条款</a>约束，Google 对收到的数据的处理见 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>。隐私和数据删除请求可联系 speaklog@erzhiqian.cc。</p></section>
 </article>
 <aside class="guide-related"><h2>继续阅读</h2><ul><li><a href="/guides/getting-started/" data-track="guide_click" data-track-location="related_guides">SpeakLog 入门：在 Mac 上导入、转录和校对</a></li><li><a href="/guides/speaking-practice/" data-track="guide_click" data-track-location="related_guides">用 SpeakLog 练口语：录下、对照、再说一遍</a></li><li><a href="/guides/export/" data-track="guide_click" data-track-location="related_guides">SpeakLog 导出指南：SRT 字幕、博客和 MP4</a></li></ul><a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="guide_footer">下载 Mac 版</a></aside>
 </main>
