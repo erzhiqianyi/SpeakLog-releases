@@ -46,3 +46,35 @@
     });
   });
 })();
+
+// Total installer downloads across all GitHub releases. Hidden until the count arrives.
+(function () {
+  var els = document.querySelectorAll('[data-downloads]');
+  if (!els.length || typeof fetch !== 'function') return;
+  var key = 'speaklog-downloads';
+  function show(total) {
+    if (!(total > 0)) return;
+    var n = new Intl.NumberFormat(document.documentElement.lang).format(total);
+    els.forEach(function (el) {
+      el.textContent = el.getAttribute('data-label').replace('{n}', n) + ' · ';
+      el.hidden = false;
+    });
+  }
+  try {
+    var cached = JSON.parse(sessionStorage.getItem(key) || 'null');
+    if (cached && Date.now() - cached.at < 3600000) return show(cached.total);
+  } catch (_) { /* Storage may be unavailable. */ }
+  fetch('https://api.github.com/repos/erzhiqianyi/SpeakLog-releases/releases?per_page=100')
+    .then(function (r) { return r.ok ? r.json() : Promise.reject(r.status); })
+    .then(function (releases) {
+      var total = 0;
+      releases.forEach(function (release) {
+        (release.assets || []).forEach(function (a) {
+          if (/\.(pkg|dmg)$/i.test(a.name)) total += a.download_count || 0;
+        });
+      });
+      try { sessionStorage.setItem(key, JSON.stringify({ total: total, at: Date.now() })); } catch (_) { /* Ignore. */ }
+      show(total);
+    })
+    .catch(function () { /* Leave the count hidden. */ });
+})();
