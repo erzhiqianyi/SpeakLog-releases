@@ -80,24 +80,7 @@
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">首页</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog 隐私与数据流：本机处理和云端 AI</span></nav>
 <article>
 <header class="guide-head"><p class="kicker">使用指南</p><h1>SpeakLog 隐私与数据流：本机处理和云端 AI</h1><p class="guide-intro">本机转录不等于所有功能都离线。SpeakLog 的转录、视频渲染和人脸打码在 Mac 上运行；使用云端 AI、画面分析或外部 Agent 时，相关内容可能交给对应的提供方。</p><p class="guide-meta">适用于 SpeakLog <span data-version="0.2.0">0.2.0</span> · 内容核对：2026-10-17 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.2.0" data-track="release_page_click" data-track-location="guide_version">0.2.0 发布说明</a></p></header>
-<nav class="guide-toc card" aria-label="本页内容"><ol><li><a href="#section-1">哪些工作在本机进行</a></li><li><a href="#section-2">哪些内容可能交给 AI 提供方</a></li><li><a href="#section-3">项目、日志和外部 Agent</a></li><li><a href="#section-4">费用和控制边界</a></li><li><a href="#section-5">这个网站的统计</a></li><li><a href="#youtube">YouTube 连接与发布</a></li></ol></nav>
-<section id="youtube"><h2>Google / YouTube 用户数据隐私政策</h2>
-<p>更新日期：2026 年 10 月 17 日。本节适用于 SpeakLog 可选的 Google OAuth 连接与 YouTube 发布功能。SpeakLog 是原生 macOS 应用；是否连接频道、是否上传视频均由你决定。开发者不运营收集或存储 Google / YouTube 用户数据的服务器。</p>
-<h3 id="google-data-access">1. 访问哪些 Google 用户数据</h3>
-<p>授权后，Google 向 SpeakLog 提供 OAuth 访问令牌和刷新令牌。应用通过 YouTube Data API 请求所选频道的资料（频道 ID 和 snippet，其中可能包含名称、介绍和缩略图地址）；应用只使用并保存其中的频道 ID 和名称。发布时，应用处理你选择的视频、标题、介绍、公开范围、可选封面、字幕文字与语言，并接收上传会话地址、进度及新视频 ID。视频和字幕来自本地作品，并非下载你现有的 YouTube 视频。</p>
-<p>请求权限为 <code>https://www.googleapis.com/auth/youtube.force-ssl</code>。Google 将其描述为可查看、修改或删除视频、评分、评论和字幕。SpeakLog 仅用它确认频道并上传视频、封面和独立字幕，不读取评分或评论，不提供删除视频的操作。较窄的视频上传权限不能用于独立字幕上传。应用不请求 Gmail、联系人、日历、Google Drive 文件或 Google 密码。</p>
-<h3 id="google-data-use">2. 如何使用 Google 用户数据</h3>
-<p>频道 ID 和名称用于显示并确认发布目的地；令牌用于认证你请求的连接和发布操作。视频、字幕、元数据及封面只用于你选择的 YouTube 上传。会话及发布记录用于断点续传、避免重复上传和打开结果。发布需经你确认，任务运行期间可在后台继续。Google / YouTube API 数据不出售，不用于广告、画像、信用决策或 AI / ML 模型的开发、改进和训练。</p>
-<h3 id="google-data-sharing">3. 数据共享、传输与披露</h3>
-<p>YouTube 集成直接向 Google OAuth 服务发送授权请求及凭证，直接从 Mac 向 Google / YouTube API 发送所选发布内容和必要授权，不经开发者自建后端。Google / YouTube 按 <a href="https://policies.google.com/privacy">Google 隐私权政策</a>处理收到的信息。视频的观看对象取决于你选择的公开范围，以及 YouTube 的处理和平台规则。</p>
-<p>YouTube 集成不会把 Google 令牌、频道资料或发布记录发送给 AI 提供方、广告服务、统计服务或数据经纪商；开发者也不另行接收、共享或披露这些数据。其他可选 AI 功能按下文说明处理作品内容。若你主动共享、导出作品包，或允许外部 Agent 读取作品，接收方可能接触包内本地发布记录；请勿共享含有你希望保密信息的作品包。网站统计与应用分离，不从该集成接收 OAuth 令牌或频道数据。</p>
-<h3 id="google-data-protection">4. 数据保护机制</h3>
-<p>远程 OAuth 和 YouTube API 请求使用 HTTPS / TLS 传输加密。Google 登录在系统浏览器进行，SpeakLog 不接收你的 Google 密码。OAuth 使用 PKCE 与随机 state，授权回调仅监听本机 loopback 地址，不向网络开放服务器。刷新令牌、频道 ID 和名称存入 macOS 钥匙串，受系统凭证存储机制保护。短期访问令牌缓存在应用内存，不主动写入作品文件。本地断点上传清单以仅文件所有者可读写的权限（0600）创建。其他作品文件使用普通 macOS 文件权限，SpeakLog 不对整个作品包另加加密。请保护 Mac、备份及共享文件夹的访问权限。</p>
-<h3 id="google-data-retention">5. 数据保留与删除</h3>
-<p>钥匙串中的刷新令牌和频道身份保留在 Mac，供后续发布使用，直至你断开或更换该连接；本地记录没有固定自动删除期限。短期访问令牌只在有效期内使用，刷新时替换内存缓存，断开或退出应用时清除缓存。在「设置 → YouTube → 断开连接」中，应用删除本机频道授权并清除访问令牌缓存。你也可在 <a href="https://myaccount.google.com/connections">Google 账号连接管理</a>中撤销 Google 侧授权；撤销授权不会自行删除本地作品文件。</p>
-<p>未完成的上传会话记录保留至上传完成或你放弃本地会话；成功上传后应用移除待完成会话记录。渲染视频、封面以及发布/历史记录（视频 ID、标题、请求的公开范围和日期）保留在本地作品，直到你删除文件或作品，没有自动保留期限。在 SpeakLog 中删除作品会将作品包移至 macOS 废纸篓；要永久删除本地副本，还需清空废纸篓，并另行删除你制作的导出、共享副本及备份。断开连接或删除本地文件不会删除 YouTube 上的内容；远程视频、字幕等需在 YouTube Studio 管理或删除，Google 持有副本的保留和删除适用其政策。</p>
-<p>隐私或数据删除协助请联系 <a href="mailto:speaklog@erzhiqian.cc">speaklog@erzhiqian.cc</a>。开发者无法远程清除仅在你 Mac 上的文件，也不能代你删除 YouTube 视频；请使用上述控制。</p>
-<p>SpeakLog 对从 Google API 获取的信息的使用和转移遵守 <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API 服务用户数据政策</a>，包括 Limited Use 要求。YouTube 发布也适用 <a href="https://www.youtube.com/t/terms">YouTube 服务条款</a>。</p></section>
+<nav class="guide-toc card" aria-label="本页内容"><ol><li><a href="#section-1">哪些工作在本机进行</a></li><li><a href="#section-2">哪些内容可能交给 AI 提供方</a></li><li><a href="#section-3">项目、日志和外部 Agent</a></li><li><a href="#section-4">费用和控制边界</a></li><li><a href="#section-5">这个网站的统计</a></li></ol></nav>
 <section id="section-1"><h2>哪些工作在本机进行</h2><p>语音转录、视频渲染、人脸检测与打码、文件导出使用 Mac 上的处理流程。首次使用某种语音语言可能需要下载系统模型。</p><p>导入的原媒体通常引用原文件位置，不因为导入而整份上传。应用内录音、项目数据、导出结果和抽取的分析帧会写入本地文件。</p></section>
 <section id="section-2"><h2>哪些内容可能交给 AI 提供方</h2><p>校对、翻译、标注、博客、内容分析、题目生成和助手对话会按功能发送相应的文字与上下文。云端提供方包括 Claude Code、Codex CLI 和 Anthropic API；CLI 登录不等于离线处理。</p><p>画面分析会从视频中抽取画面，或读取照片，并交给支持图片的 CLI 处理。全局选择 Anthropic API 或端侧模型时，画面分析仍会走 Codex CLI。抽帧不是只发送文字，也不代表上传整段原视频。</p><p>端侧模型只让它实际承担的文字任务在本机运行。不要把该设置理解为禁止全部外部调用。导入流程可自动校对；处理敏感内容前请关闭不需要的自动任务并检查设置。</p></section>
 <section id="section-3"><h2>项目、日志和外部 Agent</h2><p>项目默认保存在本机的 Movies/SpeakLog 资料库。AI 用量记录可以包含提示词、原始输出、模型、token 和费用估算，因此项目包和日志本身也可能包含私人内容。</p><p>MCP 连接在本机与应用通信，但外部 Agent 可以读取和修改项目，相关上下文也可能进入 Agent 的提供方。只连接你信任的客户端，并检查其数据处理设置。</p><p>Anthropic API 密钥由应用存入 macOS 钥匙串。不要把密钥、项目日志或私人媒体贴进公开问题报告。</p></section>
