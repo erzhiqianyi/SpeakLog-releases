@@ -16,7 +16,7 @@ SpeakLog 是给外语学习者的 Mac 应用：导入或录下你用外语说的
 | 磁盘映像 | 在 [Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest) 下载 `SpeakLog-<版本>.dmg`，把应用拖进「应用程序」 |
 | 历史版本 | [全部 Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases)，每个版本附 `SHA256SUMS` |
 
-0.1.1 需要 Apple silicon Mac（M 系列芯片）及 macOS 26 或更高版本。当前安装包不支持 Intel Mac。安装包和磁盘映像都用 Developer ID 签名并经过 Apple 公证。
+0.2.0 需要 Apple silicon Mac（M 系列芯片）及 macOS 26 或更高版本。当前安装包不支持 Intel Mac。安装包和磁盘映像都用 Developer ID 签名并经过 Apple 公证。
 
 ## 使用指南
 

@@ -66,7 +66,7 @@ test('reduced motion shows a static word and creates no animation timer', () => 
   assert.equal(env.timers.length, 0);
   assert.equal(words[1].classList.contains('on'), true);
 });
-test('animation skips punctuation, pauses hidden tabs and stops after one pass', () => {
+test('animation skips punctuation, pauses hidden tabs and loops after a rest', () => {
   const words = [word('hello'), word('、'), word('world')];
   const env = setup({ words });
   assert.equal(env.timers.length, 1);
@@ -87,10 +87,21 @@ test('animation skips punctuation, pauses hidden tabs and stops after one pass',
   assert.equal(words[2].classList.contains('on'), true);
   assert.equal(env.fill.style.width, '100%');
   assert.equal(env.tc.textContent, '0:04');
-  assert.equal(env.timers[0].active, false);
+  // 1.2 seconds of rest at 400 ms a word: nothing lit, the bar stays full.
+  for (let n = 0; n < 3; n += 1) tick();
+  assert.equal(words.some(w => w.classList.contains('on')), false);
+  assert.equal(env.fill.style.width, '100%');
+  tick();
+  assert.equal(words[0].classList.contains('on'), true);
+  assert.equal(env.fill.style.width, '50%');
+  assert.equal(env.fill.style.transition, 'none');
+  assert.equal(env.tc.textContent, '0:02');
+  assert.equal(env.timers[0].active, true);
+  tick();
+  assert.equal(env.fill.style.transition, '');
   assert.ok(env.timers[0].delay * 2 <= 4000);
 });
-test('long demo still finishes within four active seconds and clears its timer', () => {
+test('long demo still finishes a pass within four active seconds and keeps looping', () => {
   const words = Array.from({ length: 100 }, () => word('hello'));
   const env = setup({ words });
   const timer = env.timers[0];
@@ -99,7 +110,7 @@ test('long demo still finishes within four active seconds and clears its timer',
     assert.equal(timer.active, true);
     timer.fn();
   }
-  assert.equal(timer.active, false);
+  assert.equal(timer.active, true);
   assert.equal(env.fill.style.width, '100%');
 });
 test('package and release clicks stay distinct and include page language', () => {

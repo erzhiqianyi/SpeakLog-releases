@@ -16,7 +16,7 @@ Website: https://speak.erzhiqian.cc/en/
 | Disk image | Download `SpeakLog-<version>.dmg` from [Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest) and drag the app into Applications |
 | Previous versions | [All releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases), each with `SHA256SUMS` |
 
-Version 0.1.1 requires an Apple silicon Mac (M-series chip) running macOS 26 or later. The current package does not support Intel Macs. The installer and disk image are signed with a Developer ID and notarized by Apple.
+Version 0.2.0 requires an Apple silicon Mac (M-series chip) running macOS 26 or later. The current package does not support Intel Macs. The installer and disk image are signed with a Developer ID and notarized by Apple.
 
 ## Guides
 

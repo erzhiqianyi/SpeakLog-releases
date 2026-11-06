@@ -10,17 +10,22 @@
     return;
   }
   var i = 0;
-  // A single pass finishes within four active seconds; no endless animation.
-  var timer = setInterval(function () {
+  var step = Math.min(400, 4000 / words.length);
+  // After a pass the frame rests for a moment, then plays again. Reduced motion stays static above.
+  var rest = Math.ceil(1200 / step);
+  setInterval(function () {
     if (document.hidden) return;
+    var again = i >= words.length + rest;
+    if (again) i = 0;
+    // The bar jumps back to the start instead of sliding there.
+    fill.style.transition = again ? 'none' : '';
     words.forEach(function (w) { w.classList.remove('on'); });
     if (i < words.length) words[i].classList.add('on');
     i += 1;
     var p = Math.min(i / words.length, 1);
     fill.style.width = (p * 100) + '%';
     tc.textContent = '0:0' + Math.floor(p * 4);
-    if (i >= words.length) clearInterval(timer);
-  }, Math.min(400, 4000 / words.length));
+  }, step);
 })();
 
 // Analytics is optional. Blocking it must never break navigation or the FAQ.
