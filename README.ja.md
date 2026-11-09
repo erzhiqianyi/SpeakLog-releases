@@ -16,7 +16,7 @@ SpeakLog は語学学習者のための Mac アプリです。外国語で話し
 | ディスクイメージ | [Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest) から `SpeakLog-<バージョン>.dmg` をダウンロードし、アプリを「アプリケーション」にドラッグ |
 | 過去のバージョン | [すべての Releases](https://github.com/erzhiqianyi/SpeakLog-releases/releases)（各バージョンに `SHA256SUMS` 付き） |
 
-0.2.0 には Apple silicon Mac（M シリーズ）と macOS 26 以降が必要です。現在のパッケージは Intel Mac に対応していません。インストーラとディスクイメージは Developer ID で署名され、Apple の公証を受けています。
+0.3.0 には Apple silicon Mac（M シリーズ）と macOS 26 以降が必要です。現在のパッケージは Intel Mac に対応していません。インストーラとディスクイメージは Developer ID で署名され、Apple の公証を受けています。
 
 ## 使い方ガイド
 

@@ -62,7 +62,7 @@
       "description": "録音を Mac 上で文字起こしし、元の発言と自然な表現を比較。字幕・学習ブログ・MP4 を書き出せる SpeakLog。Apple silicon、macOS 26 以降に対応。",
       "url": "https://speak.erzhiqian.cc/ja/",
       "image": "https://speak.erzhiqian.cc/assets/icon-512.png",
-      "softwareVersion": "0.2.0",
+      "softwareVersion": "0.3.0",
       "downloadUrl": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg",
       "inLanguage": "ja",
       "featureList": [
@@ -72,10 +72,11 @@
         "note・Medium・X 向けの学習ブログ",
         "単語ハイライト・品詞カラー・ふりがな付きの字幕動画",
         "映り込んだ人の顔を自動でぼかし",
-        "AI アシスタントと外部エージェント（MCP）"
+        "AI アシスタントと外部エージェント（MCP）",
+        "お手本読み上げ付きの練習レッスン動画"
       ],
       "processorRequirements": "Apple silicon (arm64)",
-      "releaseNotes": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.2.0"
+      "releaseNotes": "https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.3.0"
     },
     {
       "@type": "FAQPage",
@@ -109,7 +110,7 @@
           "name": "動作環境は？",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "現在の 0.2.0 パッケージは Apple silicon Mac（M シリーズ）と macOS 26 以降が必要で、Intel Mac には対応していません。端末内の文字 AI には Apple Intelligence も必要です。"
+            "text": "現在の 0.3.0 パッケージは Apple silicon Mac（M シリーズ）と macOS 26 以降が必要で、Intel Mac には対応していません。端末内の文字 AI には Apple Intelligence も必要です。"
           }
         },
         {
@@ -191,7 +192,7 @@
     </div>
   </section>
 
-<section class="quick-facts" aria-label="SpeakLog 製品情報"><div class="wrap"><dl><div><dt>公開バージョン</dt><dd>0.2.0</dd></div><div><dt>動作環境</dt><dd>Apple silicon · macOS 26+</dd></div><div><dt>Mac 上で処理</dt><dd>文字起こし・描画・書き出し</dd></div><div><dt>任意の AI 機能</dt><dd>校正・ブログ・分析</dd></div></dl></div></section>
+<section class="quick-facts" aria-label="SpeakLog 製品情報"><div class="wrap"><dl><div><dt>公開バージョン</dt><dd>0.3.0</dd></div><div><dt>動作環境</dt><dd>Apple silicon · macOS 26+</dd></div><div><dt>Mac 上で処理</dt><dd>文字起こし・描画・書き出し</dd></div><div><dt>任意の AI 機能</dt><dd>校正・ブログ・分析</dd></div></dl></div></section>
 
   <section id="why" aria-labelledby="why-title">
     <div class="wrap">
@@ -349,6 +350,10 @@
         <div class="feat"><h3>顔のぼかし</h3><p>Mac 上で顔を検出し、人ごとにぼかすか選べます。撮影者本人は初期設定でぼかしません。</p></div>
         <div class="feat"><h3>複数素材のプロジェクト</h3><p>動画や写真をまとめて読み込むと、AI が全体の紹介を書き、素材を評価し、内容と映像を分析します。</p></div>
         <div class="feat"><h3>外部エージェント</h3><p>MCP サーバー内蔵。Claude Code や Codex から作品の読み書きや動画の書き出しができます。</p></div>
+        <div class="feat"><h3>練習レッスン動画</h3><p>AI にフォーマットどおりのレッスンを書いてもらうと、Q&amp;A カード・パターン練習・縦型の動画日記の画面と字幕を作成。ナレーションどおりに一文ずつ録音して書き出せます。</p></div>
+        <div class="feat"><h3>お手本を聞いてから読む</h3><p>一文ずつお手本の読み上げを聞けます。macOS の音声、VOICEVOX、AivisSpeech、Azure から選べ、未録音の文は読み上げで仮置きできます。</p></div>
+        <div class="feat"><h3>日本語のアクセント表示</h3><p>日本語の文に音の高低・区切り・ポーズを表示。見ながら読めば、より自然な発音に近づけます。</p></div>
+        <div class="feat"><h3>話し方の改善</h3><p>複数の録音の修正を AI が繰り返し出る課題にまとめ、原因・直し方・練習文と推移を示します。</p></div>
       </div>
     </div>
   </section>
@@ -381,7 +386,7 @@
         <details><summary>どの言語に対応していますか？</summary><p>練習言語は作品ごとに設定でき、英語・日本語・中国語・韓国語・フランス語・スペイン語・ドイツ語などを選べます。文字起こしは macOS の音声対応状況によって異なり、初回はモデルのダウンロードが必要な場合があります。説明・翻訳言語は別に設定できます。</p></details>
         <details><summary>録音や動画はアップロードされますか？</summary><p>文字起こし、描画、顔のぼかし、書き出しはローカルで行います。クラウド AI には各機能に必要な文字や文脈を送ります。映像分析では抽出フレームや写真を Claude Code または Codex に渡し、全体設定が端末内モデルでも Codex を使います。個人的な素材では自動校正と提供元の設定を確認してください。</p></details>
         <details><summary>AI に元の発言を書き換えられませんか？</summary><p>文字起こしと自然な表現は別のレイヤーで、提案を採用・スキップ・編集できます。ただし AI アシスタントや外部エージェントは字幕などを編集できるため、すべての項目が変更不能ではありません。元の素材を保管し、大事な変更は確認してください。</p></details>
-        <details><summary>動作環境は？</summary><p>現在の 0.2.0 パッケージは Apple silicon Mac（M シリーズ）と macOS 26 以降が必要で、Intel Mac には対応していません。端末内の文字 AI には Apple Intelligence も必要です。</p></details>
+        <details><summary>動作環境は？</summary><p>現在の 0.3.0 パッケージは Apple silicon Mac（M シリーズ）と macOS 26 以降が必要で、Intel Mac には対応していません。端末内の文字 AI には Apple Intelligence も必要です。</p></details>
         <details><summary>どの形式で書き出せますか？</summary><p>字幕は SRT・VTT・ASS、ブログは Markdown・HTML に対応します。リッチテキストを note や Medium に貼り付けたり、X のスレッドに分けたりできます。動画は 16:9・9:16・1:1 の MP4 で、アップロードや投稿は自分で行います。</p></details>
       </div>
     </div>
@@ -394,7 +399,7 @@
         <h2 id="download-title">今日、ひとこと話してみよう。</h2>
         <p>うまく話せなくても大丈夫。まず話して、直すのはあとで。</p>
         <a class="btn btn-primary" href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/latest/download/SpeakLog.pkg" data-track="package_download_click" data-track-location="cta">Mac 版をダウンロード</a>
-        <p class="sys">現在のバージョン <span data-version="0.2.0">0.2.0</span> · <span data-downloads data-label="ダウンロード {n} 回" hidden></span>Apple silicon（M シリーズ）· macOS 26+ · Apple 公証済みインストーラ · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="release_page_click" data-track-location="releases">DMG と過去のバージョン</a></p>
+        <p class="sys">現在のバージョン <span data-version="0.3.0">0.3.0</span> · <span data-downloads data-label="ダウンロード {n} 回" hidden></span>Apple silicon（M シリーズ）· macOS 26+ · Apple 公証済みインストーラ · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases" data-track="release_page_click" data-track-location="releases">DMG と過去のバージョン</a></p>
       </div>
     </div>
   </section>

@@ -79,12 +79,12 @@
 <main id="main" class="guide wrap">
 <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="/">首页</a><span aria-hidden="true"> / </span><span aria-current="page">SpeakLog 隐私与数据流：本机处理和云端 AI</span></nav>
 <article>
-<header class="guide-head"><p class="kicker">使用指南</p><h1>SpeakLog 隐私与数据流：本机处理和云端 AI</h1><p class="guide-intro">本机转录不等于所有功能都离线。SpeakLog 的转录、视频渲染和人脸打码在 Mac 上运行；使用云端 AI、画面分析或外部 Agent 时，相关内容可能交给对应的提供方。</p><p class="guide-meta">适用于 SpeakLog <span data-version="0.2.0">0.2.0</span> · 内容核对：2026-10-17 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.2.0" data-track="release_page_click" data-track-location="guide_version">0.2.0 发布说明</a></p></header>
+<header class="guide-head"><p class="kicker">使用指南</p><h1>SpeakLog 隐私与数据流：本机处理和云端 AI</h1><p class="guide-intro">本机转录不等于所有功能都离线。SpeakLog 的转录、视频渲染和人脸打码在 Mac 上运行；使用云端 AI、画面分析或外部 Agent 时，相关内容可能交给对应的提供方。</p><p class="guide-meta">适用于 SpeakLog <span data-version="0.3.0">0.3.0</span> · 内容核对：2026-10-17 · <a href="https://github.com/erzhiqianyi/SpeakLog-releases/releases/tag/v0.3.0" data-track="release_page_click" data-track-location="guide_version">0.3.0 发布说明</a></p></header>
 <nav class="guide-toc card" aria-label="本页内容"><ol><li><a href="#section-1">哪些工作在本机进行</a></li><li><a href="#section-2">哪些内容可能交给 AI 提供方</a></li><li><a href="#section-3">项目、日志和外部 Agent</a></li><li><a href="#section-4">费用和控制边界</a></li><li><a href="#section-5">这个网站的统计</a></li></ol></nav>
 <section id="section-1"><h2>哪些工作在本机进行</h2><p>语音转录、视频渲染、人脸检测与打码、文件导出使用 Mac 上的处理流程。首次使用某种语音语言可能需要下载系统模型。</p><p>导入的原媒体通常引用原文件位置，不因为导入而整份上传。应用内录音、项目数据、导出结果和抽取的分析帧会写入本地文件。</p></section>
 <section id="section-2"><h2>哪些内容可能交给 AI 提供方</h2><p>校对、翻译、标注、博客、内容分析、题目生成和助手对话会按功能发送相应的文字与上下文。云端提供方包括 Claude Code、Codex CLI 和 Anthropic API；CLI 登录不等于离线处理。</p><p>画面分析会从视频中抽取画面，或读取照片，并交给支持图片的 CLI 处理。全局选择 Anthropic API 或端侧模型时，画面分析仍会走 Codex CLI。抽帧不是只发送文字，也不代表上传整段原视频。</p><p>端侧模型只让它实际承担的文字任务在本机运行。不要把该设置理解为禁止全部外部调用。导入流程可自动校对；处理敏感内容前请关闭不需要的自动任务并检查设置。</p></section>
 <section id="section-3"><h2>项目、日志和外部 Agent</h2><p>项目默认保存在本机的 Movies/SpeakLog 资料库。AI 用量记录可以包含提示词、原始输出、模型、token 和费用估算，因此项目包和日志本身也可能包含私人内容。</p><p>MCP 连接在本机与应用通信，但外部 Agent 可以读取和修改项目，相关上下文也可能进入 Agent 的提供方。只连接你信任的客户端，并检查其数据处理设置。</p><p>Anthropic API 密钥由应用存入 macOS 钥匙串。不要把密钥、项目日志或私人媒体贴进公开问题报告。</p></section>
-<section id="section-4"><h2>费用和控制边界</h2><p>端侧模型的文字任务不产生云端 API 调用费用。云端订阅、API 账单、额度及数据保留规则取决于你选用的提供方。应用显示的费用是估算值，不是提供方的最终账单。</p><p>这里说明 0.2.0 的功能与数据路径，不承诺第三方如何保留数据，也不宣布应用的未来价格。使用前请查看对应服务的条款与隐私设置。</p></section>
+<section id="section-4"><h2>费用和控制边界</h2><p>端侧模型的文字任务不产生云端 API 调用费用。云端订阅、API 账单、额度及数据保留规则取决于你选用的提供方。应用显示的费用是估算值，不是提供方的最终账单。</p><p>这里说明 0.3.0 的功能与数据路径，不承诺第三方如何保留数据，也不宣布应用的未来价格。使用前请查看对应服务的条款与隐私设置。</p></section>
 <section id="section-5"><h2>这个网站的统计</h2><p>产品网站使用 Google Analytics 4 统计浏览和交互，包括页面语言、下载按钮、发布页链接、语言切换与常见问题展开。下载按钮点击只表示点击，不代表安装完成。</p><p>网站会加载 Google 的统计脚本；浏览器或内容拦截器可能阻止它。此网站统计与 Mac 应用处理的录音和项目内容是不同的数据流。隐私问题可联系 speaklog@erzhiqian.cc。</p></section>
 
 </article>
